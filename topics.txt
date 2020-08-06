@@ -1,0 +1,168 @@
+1) Classes
+	get and set
+
+	Class expressions
+		The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) name property, though).
+
+		// unnamed
+		let Rectangle = class {
+		  constructor(height, width) {
+		    this.height = height;
+		    this.width = width;
+		  }
+		};
+		console.log(Rectangle.name);
+		// output: "Rectangle"
+
+		// named
+		let Rectangle = class Rectangle2 {
+		  constructor(height, width) {
+		    this.height = height;
+		    this.width = width;
+		  }
+		};
+		console.log(Rectangle.name);
+		// output: "Rectangle2"
+
+	Class declarations
+		Normal way of declaring classes
+
+	Static methods
+		The static keyword defines a static method for a class. Static methods are called without instantiating their class and cannot be called through a class instance. Static methods are often used to create utility functions for an application.
+
+	Private fields - #a
+
+2) Prototypical Inheritance - prototype delegation
+	var animalGroups = {
+	  MAMMAL: 1,
+	  REPTILE: 2,
+	  AMPHIBIAN: 3,
+	  INVERTEBRATE: 4
+	};
+	function Animal(name, type) {
+	  this.name = name;
+	  this.type = type;
+	}
+	var dog = new Animal("dog", animalGroups.MAMMAL);
+	var crocodile = new Animal("crocodile", animalGroups.REPTILE);
+
+	Animal.prototype.shout = function() {
+	    console.log(this.name + ' is ' + this.sound + 'ing...');
+	}
+
+	function Dog(name, type) {
+	   Animal.call(this, name, type);
+	   this.sound = "bow";
+	}
+
+	var pet = new Dog("germanShepard", animalGroups.MAMMAL);
+	console.log(pet); // returns Dog {name: "germanShepard", type: 1, sound: "bow"}
+
+	// Link prototype chains
+	Dog.prototype = Object.create(Animal.prototype);
+	var pet = new Dog("germanShepard", animalGroups.MAMMAL);
+	// Now shout method is available
+	pet.shout(); // germanShepard is bowing...
+
+	pet.constructor; // returns Animal
+	Dog.prototype.constructor; // returns Animal
+	Dog.prototype.constructor = Dog;
+
+	These four things you should remember about prototypical inheritance.
+		Class properties are bound using this
+		Class methods are bound using prototype object
+		To inherit properties, use call function passing this object
+		To inherit methods, use Object.create to link prototypes of parent and child
+		Always set child class constructor to itself for getting the right identity of its objects
+
+	In JS, call function and prototype object provides inheritance
+
+3) Value vs Reference
+	Primitives (copied by value)
+		null
+		undefined
+		Number
+		String
+		Boolean
+	Objects (copied by reference)
+		Object
+		Array
+		Function
+
+4) Hoisting
+	JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. Classes are not hoisted.
+	Variables which are assigned without a var declaration are considered to be global variables
+	//Example
+	a = 'Cran'; //Initialize a
+	b = 'berry'; //Initialize b
+	console.log(a + "" + b); // 'Cranberry'
+	var a, b; //Declare both a & b for hoisting
+
+	Function declarations hoist the function definitions. Hence, functions declaration can be used before they are declared.
+	Function expressions in JavaScript are not hoisted.
+
+	https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff
+
+5) Arrow function
+	Shorter syntax
+	1 parameter no need of parenthesis
+	If returning, no need of curly braces. Only when multiple statements add braces.
+	No need to bind this, uses the same context
+	Arrow functions do not have "arguments"
+
+6) Rest parameters/spread
+	Breaks the parameters (a,b, ...rest) into array
+
+7) map, reduce, filter
+	map - similar to loops, processing
+	reduce - accumulator, current value, current index => returns one operated value
+	filter - filters out the values where the condition is satisfied in return statement
+
+	All these can be combined
+
+8) bind, call, apply
+	bind - adding a context which will be accessible in the method (useful while calling)
+	call - cylinder.volume.call({pi: 3.14159}, 2, 6);
+	apply - cylinder.volume.apply({pi: 3.14159}, [2, 6]); // parameters are passed in an array
+
+9) Recursion
+	Base case, recursive case
+	
+10) Callbacks and Promises
+	new Promise(function(resolve, reject){})
+
+	async function a() {
+		const abc = await xyz(); // must return a promise
+	}
+	-----
+	a.then(b();).catch(fail)
+
+	Promise.all([]).then()
+
+	A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+	
+	Fulfilled: onFulfilled() will be called (e.g., resolve() was called)
+	Rejected: onRejected() will be called (e.g., reject() was called)
+	Pending: not yet fulfilled or rejected
+
+11) Closures/scopes
+	 closures/scopes
+		Global scope
+		Local Scope/Function scope
+		Block scope(Introduced in ES6)
+
+12) Event Bubbling
+	With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. With capturing, the process is in reverse. We usually attach an event to a handler using the addEventListener function.
+	The third argument useCapture is the key. The default value is false. So, it will be a bubbling model where the event is handled by the innermost element first and it propagates outwards till it reaches the parent element. If that argument is true, it is capturing model.
+	addEventListener("click", handler, useCapture=false)
+	Handling of Bubbling model ⬆️, capturing model ⬇️
+	
+	https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+
+13) freeze, seal
+	Object.freeze - will freeze the keys at that level, throws error in strict mode
+		Object.isFrozen(obj)
+	Object.seal - Cannot add new or delete property but configure them
+		Object.isSealed(obj)
+
+14) error handling patterns

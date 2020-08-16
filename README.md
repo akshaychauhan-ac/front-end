@@ -19,9 +19,9 @@
 # ES6 -
 
 let, var, const <br>
-rest parameters - (day, ...restParams)
-destructuring
-spread syntax
-arrow functions
-default parameters
-creating a module - export import
+rest parameters - (day, ...restParams) <br>
+destructuring <br>
+spread syntax <br>
+arrow functions <br>
+default parameters <br>
+creating a module - export import <br>

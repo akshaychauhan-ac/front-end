@@ -14,3 +14,14 @@
 12) Event Bubbling
 13) freeze, seal
 14) error handling patterns
+
+
+# ES6 -
+
+let, var, const
+rest parameters - (day, ...restParams)
+destructuring
+spread syntax
+arrow functions
+default parameters
+creating a module - export import

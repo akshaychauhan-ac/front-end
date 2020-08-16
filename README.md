@@ -18,7 +18,7 @@
 
 # ES6 -
 
-let, var, const
+let, var, const <br>
 rest parameters - (day, ...restParams)
 destructuring
 spread syntax

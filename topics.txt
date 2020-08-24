@@ -166,3 +166,7 @@
 		Object.isSealed(obj)
 
 14) error handling patterns
+
+15) Event looping
+	https://flaviocopes.com/javascript-event-loop/
+	Call stack first then message queue (setTimeout)

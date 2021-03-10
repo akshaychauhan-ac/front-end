@@ -14,7 +14,7 @@
     12) Event Bubbling
     13) freeze, seal
     14) error handling patterns
-    15) [Map, Set](https://javascript.info/map-set)
+    15) [Map, Set!](https://javascript.info/map-set)
 
 
 # ES6 -

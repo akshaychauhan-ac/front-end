@@ -26,3 +26,8 @@ spread syntax <br>
 arrow functions <br>
 default parameters <br>
 creating a module - export import <br>
+
+
+# Links - 
+
+1) https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d

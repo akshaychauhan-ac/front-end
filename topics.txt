@@ -63,7 +63,7 @@
 
 		newVolume(2,6); // Now pi is 3.14159
 
-3) Event looping
+3) Event loop
 	https://flaviocopes.com/javascript-event-loop/
 	Call stack first then message queue (setTimeout)
 

@@ -1,20 +1,21 @@
 # Javascript Topics
 
-1) Classes
-2) Prototypical Inheritance - prototype delegation
-3) Value vs Reference
+1) Prototypical Inheritance - prototype delegation
+2) bind, call, apply
+3) Event loop
 4) Hoisting
 5) Arrow function
 6) Rest parameters/spread
 7) map, reduce, filter
-8) bind, call, apply
+8) Classes
 9) Recursion
 10) Callbacks and Promises
 11) Closures/scopes
 12) Event Bubbling
 13) freeze, seal
 14) error handling patterns
-15) [Map, Set](https://javascript.info/map-set)
+15) Value vs Reference
+16) [Map, Set](https://javascript.info/map-set)
 
 
 # ES6 -

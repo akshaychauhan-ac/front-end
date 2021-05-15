@@ -1,38 +1,4 @@
-1) Classes
-	get and set
-
-	Class expressions
-		The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) name property, though).
-
-		// unnamed
-		let Rectangle = class {
-		  constructor(height, width) {
-		    this.height = height;
-		    this.width = width;
-		  }
-		};
-		console.log(Rectangle.name);
-		// output: "Rectangle"
-
-		// named
-		let Rectangle = class Rectangle2 {
-		  constructor(height, width) {
-		    this.height = height;
-		    this.width = width;
-		  }
-		};
-		console.log(Rectangle.name);
-		// output: "Rectangle2"
-
-	Class declarations
-		Normal way of declaring classes
-
-	Static methods
-		The static keyword defines a static method for a class. Static methods are called without instantiating their class and cannot be called through a class instance. Static methods are often used to create utility functions for an application.
-
-	Private fields - #a
-
-2) Prototypical Inheritance - prototype delegation
+1) Prototypical Inheritance - prototype delegation
 	var animalGroups = {
 	  MAMMAL: 1,
 	  REPTILE: 2,
@@ -76,18 +42,30 @@
 		Always set child class constructor to itself for getting the right identity of its objects
 
 	In JS, call function and prototype object provides inheritance
+	
+2) bind, call, apply
+	var cylinder = {
+	    pi: 3.14,
+	    volume: function(r, h) {
+		return this.pi * r * r * h;
+	    }
+	};
 
-3) Value vs Reference
-	Primitives (copied by value)
-		null
-		undefined
-		Number
-		String
-		Boolean
-	Objects (copied by reference)
-		Object
-		Array
-		Function
+	call - cylinder.volume.call({pi: 3.14159}, 2, 6);
+	apply - cylinder.volume.apply({pi: 3.14159}, [2, 6]); // parameters are passed in an array
+	
+	call() and apply() are useful for when you want to borrow a method from one object and use it in a completely separate object. 
+	For example, using our cat example above, we could reuse its printInfo() function to print information about a dog
+	
+	bind - adding a context which will be accessible in the method (useful while calling)
+		useful for maintaining context in asynchronous callbacks and events
+		var newVolume = cylinder.volume.bind({pi: 3.14159}); // This is not instant call
+
+		newVolume(2,6); // Now pi is 3.14159
+
+3) Event looping
+	https://flaviocopes.com/javascript-event-loop/
+	Call stack first then message queue (setTimeout)
 
 4) Hoisting
 	JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. Classes are not hoisted.
@@ -120,25 +98,39 @@
 
 	All these can be combined
 
-8) bind, call, apply
-	var cylinder = {
-	    pi: 3.14,
-	    volume: function(r, h) {
-		return this.pi * r * r * h;
-	    }
-	};
+8) Classes
+	get and set
 
-	call - cylinder.volume.call({pi: 3.14159}, 2, 6);
-	apply - cylinder.volume.apply({pi: 3.14159}, [2, 6]); // parameters are passed in an array
-	
-	call() and apply() are useful for when you want to borrow a method from one object and use it in a completely separate object. 
-	For example, using our cat example above, we could reuse its printInfo() function to print information about a dog
-	
-	bind - adding a context which will be accessible in the method (useful while calling)
-		useful for maintaining context in asynchronous callbacks and events
-		var newVolume = cylinder.volume.bind({pi: 3.14159}); // This is not instant call
+	Class expressions
+		The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) name property, though).
 
-		newVolume(2,6); // Now pi is 3.14159
+		// unnamed
+		let Rectangle = class {
+		  constructor(height, width) {
+		    this.height = height;
+		    this.width = width;
+		  }
+		};
+		console.log(Rectangle.name);
+		// output: "Rectangle"
+
+		// named
+		let Rectangle = class Rectangle2 {
+		  constructor(height, width) {
+		    this.height = height;
+		    this.width = width;
+		  }
+		};
+		console.log(Rectangle.name);
+		// output: "Rectangle2"
+
+	Class declarations
+		Normal way of declaring classes
+
+	Static methods
+		The static keyword defines a static method for a class. Static methods are called without instantiating their class and cannot be called through a class instance. Static methods are often used to create utility functions for an application.
+
+	Private fields - #a
 
 9) Recursion
 	Base case, recursive case
@@ -182,6 +174,14 @@
 
 14) error handling patterns
 
-15) Event looping
-	https://flaviocopes.com/javascript-event-loop/
-	Call stack first then message queue (setTimeout)
+15) Value vs Reference
+	Primitives (copied by value)
+		null
+		undefined
+		Number
+		String
+		Boolean
+	Objects (copied by reference)
+		Object
+		Array
+		Function

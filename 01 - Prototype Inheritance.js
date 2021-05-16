@@ -1,4 +1,4 @@
-Prototype Inheritance
+// Prototype Inheritance
 
 var animalGroups = {
   MAMMAL: 1,
@@ -35,11 +35,11 @@ pet.constructor; // returns Animal
 Dog.prototype.constructor; // returns Animal
 Dog.prototype.constructor = Dog;
 
-These four things you should remember about prototypical inheritance.
-	Class properties are bound using this
-	Class methods are bound using prototype object
-	To inherit properties, use call function passing this object
-	To inherit methods, use Object.create to link prototypes of parent and child
-	Always set child class constructor to itself for getting the right identity of its objects
+// These four things you should remember about prototypical inheritance.
+	// Class properties are bound using this
+	// Class methods are bound using prototype object
+	// To inherit properties, use call function passing this object
+	// To inherit methods, use Object.create to link prototypes of parent and child
+	// Always set child class constructor to itself for getting the right identity of its objects
 
-In JS, call function and prototype object provides inheritance
+// In JS, call function and prototype object provides inheritance

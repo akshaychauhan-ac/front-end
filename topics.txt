@@ -6,19 +6,22 @@
 	https://flaviocopes.com/javascript-event-loop/
 	Call stack first then message queue (setTimeout)
 
-4) Hoisting
-	JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. Classes are not hoisted.
-	Variables which are assigned without a var declaration are considered to be global variables
-	//Example
-	a = 'Cran'; //Initialize a
-	b = 'berry'; //Initialize b
-	console.log(a + "" + b); // 'Cranberry'
-	var a, b; //Declare both a & b for hoisting
+4) Callbacks and Promises (async/await)
+	new Promise(function(resolve, reject){})
 
-	Function declarations hoist the function definitions. Hence, functions declaration can be used before they are declared.
-	Function expressions in JavaScript are not hoisted.
+	async function a() {
+		const abc = await xyz(); // must return a promise
+	}
+	-----
+	a.then(b();).catch(fail)
 
-	https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff
+	Promise.all([]).then()
+
+	A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+	
+	Fulfilled: onFulfilled() will be called (e.g., resolve() was called)
+	Rejected: onRejected() will be called (e.g., reject() was called)
+	Pending: not yet fulfilled or rejected
 
 5) Arrow function
 	Shorter syntax
@@ -74,22 +77,19 @@
 9) Recursion
 	Base case, recursive case
 	
-10) Callbacks and Promises
-	new Promise(function(resolve, reject){})
+10) Hoisting
+	JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. Classes are not hoisted.
+	Variables which are assigned without a var declaration are considered to be global variables
+	//Example
+	a = 'Cran'; //Initialize a
+	b = 'berry'; //Initialize b
+	console.log(a + "" + b); // 'Cranberry'
+	var a, b; //Declare both a & b for hoisting
 
-	async function a() {
-		const abc = await xyz(); // must return a promise
-	}
-	-----
-	a.then(b();).catch(fail)
+	Function declarations hoist the function definitions. Hence, functions declaration can be used before they are declared.
+	Function expressions in JavaScript are not hoisted.
 
-	Promise.all([]).then()
-
-	A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
-	
-	Fulfilled: onFulfilled() will be called (e.g., resolve() was called)
-	Rejected: onRejected() will be called (e.g., reject() was called)
-	Pending: not yet fulfilled or rejected
+	https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff
 
 11) Closures/scopes
 	 closures/scopes

@@ -1,15 +1,15 @@
 # Javascript Topics
 
 1) Prototypical Inheritance - prototype delegation
-2) bind, call, apply
+2) Call, apply, bind
 3) Event loop
-4) Hoisting
+4) Callbacks and Promises (async/await)
 5) Arrow function
 6) Rest parameters/spread
 7) map, reduce, filter
 8) Classes
 9) Recursion
-10) Callbacks and Promises
+10) Hoisting
 11) Closures/scopes
 12) Event Bubbling
 13) freeze, seal

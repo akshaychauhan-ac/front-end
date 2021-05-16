@@ -1,4 +1,4 @@
-Prototypical Inheritance - prototype delegation
+Prototype Inheritance
 
 var animalGroups = {
   MAMMAL: 1,

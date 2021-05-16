@@ -1,6 +1,6 @@
 # Javascript Topics
 
-1) Prototypical Inheritance - prototype delegation
+1) Prototype Inheritance
 2) Call, apply, bind
 3) Event loop
 4) Callbacks and Promises (async/await)

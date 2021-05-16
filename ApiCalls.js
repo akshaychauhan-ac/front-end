@@ -6,6 +6,7 @@ request.send();
 // request.status
 // request.response
 
+/******************************************************************************************************/
 
 // 2) Fetch
 
@@ -14,13 +15,13 @@ fetch("https://jsonplaceholder.typicode.com/users")
 	.then(users => console.log(users));
 
 // Async/Await
-
 async function getUsers() {
 	let response = await fetch("https://jsonplaceholder.typicode.com/users");
 	return response.json();
 }
 getUsers().then(data => console.log(data));
 
+/******************************************************************************************************/
 
 // 3) Axios
 
@@ -28,6 +29,8 @@ getUsers().then(data => console.log(data));
 axios.get("https://jsonplaceholder.typicode.com/users")
 	.then(response => console.log(data))
 	.catch(err => console.error(err));
+
+/******************************************************************************************************/
 
 // 4) Ajax Api call by jQuery
 
@@ -42,3 +45,5 @@ $.ajax({
     console.log(error);
   }
 });
+
+/******************************************************************************************************/

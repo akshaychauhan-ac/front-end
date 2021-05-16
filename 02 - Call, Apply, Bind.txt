@@ -1,0 +1,20 @@
+Call, apply, bind -
+
+var cylinder = {
+    pi: 3.14,
+    volume: function(r, h) {
+	return this.pi * r * r * h;
+    }
+};
+
+call - cylinder.volume.call({pi: 3.14159}, 2, 6);
+apply - cylinder.volume.apply({pi: 3.14159}, [2, 6]); // parameters are passed in an array
+
+call() and apply() are useful for when you want to borrow a method from one object and use it in a completely separate object. 
+For example, using our cat example above, we could reuse its printInfo() function to print information about a dog
+
+bind - adding a context which will be accessible in the method (useful while calling)
+	useful for maintaining context in asynchronous callbacks and events
+	var newVolume = cylinder.volume.bind({pi: 3.14159}); // This is not instant call
+
+	newVolume(2,6); // Now pi is 3.14159

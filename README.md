@@ -16,6 +16,7 @@
 14) error handling patterns
 15) Value vs Reference
 16) [Map, Set](https://javascript.info/map-set)
+17) API Calls
 
 
 # ES6 -

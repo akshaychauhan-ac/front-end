@@ -1,3 +1,5 @@
+// API Calls
+
 // 1) XMLHttpRequest
 
 let request = new XMLHttpRequest();

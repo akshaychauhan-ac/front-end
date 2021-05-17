@@ -42,3 +42,19 @@ promise
 	});
 
 // Error: Some error has occured
+
+/******************************************************************************************************/
+
+// Async/await
+
+// Async simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread
+// Await function is used to wait for the promise. It makes the code wait until the promise returns a result. It only makes the async block wait.
+
+const getData = async() => {
+    var y = await "Hello World";
+    console.log(y);
+}
+  
+console.log(1);
+getData();
+console.log(2);

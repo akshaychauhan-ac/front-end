@@ -32,5 +32,7 @@ creating a module - export import <br>
 # Links - 
 
 1) https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
-2) Event loop - https://flaviocopes.com/javascript-event-loop/
+2) Event loop - 
+	https://flaviocopes.com/javascript-event-loop/
+	https://careersjs.com/magazine/javascript-job-queue-microtask/
 3) API Calls - https://levelup.gitconnected.com/all-possible-ways-of-making-an-api-call-in-plain-javascript-c0dee3c11b8b

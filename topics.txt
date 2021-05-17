@@ -13,7 +13,7 @@
 		const abc = await xyz(); // must return a promise
 	}
 	-----
-	a.then(b();).catch(fail)
+	a.then(b()).catch(fail)
 
 	Promise.all([]).then()
 

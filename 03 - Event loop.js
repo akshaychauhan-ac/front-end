@@ -1,3 +1,18 @@
+// Event loop - There’s an endless loop, where the JavaScript engine waits for tasks, executes them and then sleeps, waiting for more tasks.
+
+// The general algorithm of the engine:
+
+// 1) While there are tasks:
+//      execute them, starting with the oldest task.
+// 2) Sleep until a task appears, then go to 1.
+
+// The Event Loop has one job — to monitor the Call Stack and the Callback Queue.
+// If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
+
+// Job Queue (Microtasks - Promises) - ES6
+// Task Queue - Web APIs
+
+
 function firstFunction() {
   thirdFunction()
 

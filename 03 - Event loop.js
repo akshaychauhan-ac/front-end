@@ -9,6 +9,7 @@
 // The Event Loop has one job — to monitor the Call Stack and the Callback Queue.
 // If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
 
+// Call Stack
 // Job Queue (Microtasks - Promises) - ES6
 // Task Queue - Web APIs
 

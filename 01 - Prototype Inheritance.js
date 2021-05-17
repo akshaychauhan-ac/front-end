@@ -14,7 +14,7 @@ var dog = new Animal("dog", animalGroups.MAMMAL);
 var crocodile = new Animal("crocodile", animalGroups.REPTILE);
 
 Animal.prototype.shout = function() {
-    console.log(this.name + ' is ' + this.sound + 'ing...');
+    console.log(this.name + ' is ' + this.sound + 'ing.');
 }
 
 function Dog(name, type) {
@@ -29,7 +29,7 @@ console.log(pet); // returns Dog {name: "germanShepard", type: 1, sound: "bow"}
 Dog.prototype = Object.create(Animal.prototype);
 var pet = new Dog("germanShepard", animalGroups.MAMMAL);
 // Now shout method is available
-pet.shout(); // germanShepard is bowing...
+pet.shout(); // germanShepard is bowing.
 
 pet.constructor; // returns Animal
 Dog.prototype.constructor; // returns Animal

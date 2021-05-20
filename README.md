@@ -37,3 +37,4 @@ creating a module - export import <br>
 3) [API Calls](https://levelup.gitconnected.com/all-possible-ways-of-making-an-api-call-in-plain-javascript-c0dee3c11b8b)
 4) [Callbacks and Promises](https://www.geeksforgeeks.org/javascript-promises/) ([async/await](https://www.geeksforgeeks.org/async-await-function-in-javascript/))
 5) [map, reduce, filter](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
+6) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)

@@ -1,35 +1,16 @@
 1) Prototype Inheritance
-
 2) Call, apply, bind
-
 3) Event loop
-
 4) Callbacks and Promises (async/await)
-
 5) map, reduce, filter
-
 6) Classes
-
 7) API Calls
-
 8) Map, Set
 
 9) Recursion
 	Base case, recursive case
 	
 10) Hoisting
-	JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. Classes are not hoisted.
-	Variables which are assigned without a var declaration are considered to be global variables
-	//Example
-	a = 'Cran'; //Initialize a
-	b = 'berry'; //Initialize b
-	console.log(a + "" + b); // 'Cranberry'
-	var a, b; //Declare both a & b for hoisting
-
-	Function declarations hoist the function definitions. Hence, functions declaration can be used before they are declared.
-	Function expressions in JavaScript are not hoisted.
-
-	https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff
 
 11) Closures/scopes
 	 closures/scopes

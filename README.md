@@ -41,3 +41,4 @@ creating a module - export import <br>
 5) [map, reduce, filter](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
 6) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
 7) [Closures/scopes](https://medium.com/@pvivek4/scope-and-execution-context-in-javascript-3b71e76cd193)
+8) [ES var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851)

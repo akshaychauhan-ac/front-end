@@ -7,11 +7,11 @@
 5) map, reduce, filter
 6) Classes
 7) API Calls
-8) Map, Set
-9) Recursion
-10) Hoisting
-11) Closures/scopes
-12) Event Bubbling
+8) Hoisting
+9) Closures/scopes
+10) Event Bubbling
+11) Map, Set
+12) Recursion
 13) freeze, seal
 14) error handling patterns
 15) Value vs Reference

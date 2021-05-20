@@ -5,9 +5,9 @@
 3) Event loop
 4) Callbacks and Promises (async/await)
 5) map, reduce, filter
-6) Arrow function
-7) Rest parameters/spread
-8) Classes
+6) Classes
+7) Arrow function
+8) Rest parameters/spread
 9) Recursion
 10) Hoisting
 11) Closures/scopes

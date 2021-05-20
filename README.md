@@ -28,6 +28,11 @@ default parameters <br>
 creating a module - export import <br>
 
 
+# Questions -
+
+1) [Ways to reverse a string](https://betterprogramming.pub/5-ways-to-reverse-a-string-in-javascript-466f62845827)
+
+
 # Links - 
 
 1) https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d

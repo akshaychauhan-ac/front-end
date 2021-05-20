@@ -3,43 +3,21 @@
 2) Call, apply, bind
 
 3) Event loop
-	https://flaviocopes.com/javascript-event-loop/
-	Call stack first then message queue (setTimeout)
 
 4) Callbacks and Promises (async/await)
-	new Promise(function(resolve, reject){})
 
-	async function a() {
-		const abc = await xyz(); // must return a promise
-	}
-	-----
-	a.then(b()).catch(fail)
+5) map, reduce, filter
 
-	Promise.all([]).then()
-
-	A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
-	
-	Fulfilled: onFulfilled() will be called (e.g., resolve() was called)
-	Rejected: onRejected() will be called (e.g., reject() was called)
-	Pending: not yet fulfilled or rejected
-
-5) Arrow function
+6) Arrow function
 	Shorter syntax
 	1 parameter no need of parenthesis
 	If returning, no need of curly braces. Only when multiple statements add braces.
 	No need to bind this, uses the same context
 	Arrow functions do not have "arguments"
 
-6) Rest parameters/spread
+7) Rest parameters/spread
 	Breaks the parameters (a,b, ...rest) into array
-
-7) map, reduce, filter
-	map - similar to loops, processing
-	reduce - accumulator, current value, current index => returns one operated value
-	filter - filters out the values where the condition is satisfied in return statement
-
-	All these can be combined
-
+	
 8) Classes
 	get and set
 

@@ -40,3 +40,4 @@ creating a module - export import <br>
 4) Callbacks and Promises (async/await) -
 	1) https://www.geeksforgeeks.org/javascript-promises/
 	2) https://www.geeksforgeeks.org/async-await-function-in-javascript/
+5) map, reduce, filter - https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d

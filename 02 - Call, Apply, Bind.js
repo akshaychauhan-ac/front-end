@@ -1,6 +1,6 @@
 // Call, apply, bind -
 
-// call
+// 1) call
 var mathLib = {
     pi: 3.14,
     area: function(r) {
@@ -14,7 +14,7 @@ var mathLib = {
 mathLib.area(2); // 12.56
 mathLib.area.call({pi: 3.14159}, 2);
 
-// apply
+// 2) apply
 var cylinder = {
     pi: 3.14,
     volume: function(r, h) {
@@ -25,7 +25,7 @@ cylinder.volume.apply({pi: 3.14159}, [2, 6]);
 
 // call() and apply() are useful for when you want to borrow a method from one object and use it in a completely separate object.
 
-// bind
+// 3) bind
 var newVolume = cylinder.volume.bind({pi: 3.14159}); // This is not instant call
 // After some long time, somewhere in the wild 
 newVolume(2,6); // Now pi is 3.14159

@@ -35,7 +35,5 @@ creating a module - export import <br>
 	1) [Link 1](https://flaviocopes.com/javascript-event-loop/)
 	2) [Link 2](https://careersjs.com/magazine/javascript-job-queue-microtask/)
 3) [API Calls](https://levelup.gitconnected.com/all-possible-ways-of-making-an-api-call-in-plain-javascript-c0dee3c11b8b)
-4) Callbacks and Promises (async/await) -
-	1) [Link 1](https://www.geeksforgeeks.org/javascript-promises/)
-	2) [Link 2](https://www.geeksforgeeks.org/async-await-function-in-javascript/)
+4) [Callbacks and Promises](https://www.geeksforgeeks.org/javascript-promises/) ([async/await](https://www.geeksforgeeks.org/async-await-function-in-javascript/))
 5) [map, reduce, filter](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)

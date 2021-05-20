@@ -10,15 +10,9 @@
 
 6) Classes
 
-7) Arrow function
-	Shorter syntax
-	1 parameter no need of parenthesis
-	If returning, no need of curly braces. Only when multiple statements add braces.
-	No need to bind this, uses the same context
-	Arrow functions do not have "arguments"
+7) API Calls
 
-8) Rest parameters/spread
-	Breaks the parameters (a,b, ...rest) into array
+8) Map, Set
 
 9) Recursion
 	Base case, recursive case

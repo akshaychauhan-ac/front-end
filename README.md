@@ -6,8 +6,8 @@
 4) Callbacks and Promises (async/await)
 5) map, reduce, filter
 6) Classes
-7) Arrow function
-8) Rest parameters/spread
+7) API Calls
+8) [Map, Set](https://javascript.info/map-set)
 9) Recursion
 10) Hoisting
 11) Closures/scopes
@@ -15,8 +15,6 @@
 13) freeze, seal
 14) error handling patterns
 15) Value vs Reference
-16) [Map, Set](https://javascript.info/map-set)
-17) API Calls
 
 
 # ES6 -

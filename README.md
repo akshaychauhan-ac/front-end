@@ -8,13 +8,12 @@
 6) Classes
 7) API Calls
 8) Hoisting
-9) Closures/scopes
-10) Event Bubbling
-11) Map, Set
-12) Recursion
-13) freeze, seal
-14) error handling patterns
-15) Value vs Reference
+9) Event Bubbling
+10) Map, Set
+11) Recursion
+12) freeze, seal
+13) error handling patterns
+14) Value vs Reference
 
 
 # ES6 -
@@ -41,3 +40,4 @@ creating a module - export import <br>
 4) [Callbacks and Promises](https://www.geeksforgeeks.org/javascript-promises/) ([async/await](https://www.geeksforgeeks.org/async-await-function-in-javascript/))
 5) [map, reduce, filter](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
 6) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
+7) [Closures/scopes](https://medium.com/@pvivek4/scope-and-execution-context-in-javascript-3b71e76cd193)

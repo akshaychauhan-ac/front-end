@@ -7,12 +7,7 @@
 7) API Calls
 8) Hoisting
 
-9) Closures/scopes
-		Global scope
-		Local Scope/Function scope
-		Block scope(Introduced in ES6)
-	
-10) Event Bubbling
+9) Event Bubbling
 	With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. With capturing, the process is in reverse. We usually attach an event to a handler using the addEventListener function.
 	The third argument useCapture is the key. The default value is false. So, it will be a bubbling model where the event is handled by the innermost element first and it propagates outwards till it reaches the parent element. If that argument is true, it is capturing model.
 	addEventListener("click", handler, useCapture=false)
@@ -20,20 +15,20 @@
 	
 	https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
 
-11) Map, Set
+10) Map, Set
 
-12) Recursion
+11) Recursion
 	Base case, recursive case
 
-13) freeze, seal
+12) freeze, seal
 	Object.freeze - will freeze the keys at that level, throws error in strict mode
 		Object.isFrozen(obj)
 	Object.seal - Cannot add new or delete property but configure them
 		Object.isSealed(obj)
 
-14) error handling patterns
+13) error handling patterns
 
-15) Value vs Reference
+14) Value vs Reference
 	Primitives (copied by value)
 		null
 		undefined

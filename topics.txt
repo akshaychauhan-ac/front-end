@@ -7,7 +7,7 @@
 7) API Calls
 8) Hoisting
 
-9) Event Bubbling
+9) Event Bubbling/Capturing
 	With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. With capturing, the process is in reverse. We usually attach an event to a handler using the addEventListener function.
 	The third argument useCapture is the key. The default value is false. So, it will be a bubbling model where the event is handled by the innermost element first and it propagates outwards till it reaches the parent element. If that argument is true, it is capturing model.
 	addEventListener("click", handler, useCapture=false)

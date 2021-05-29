@@ -8,7 +8,7 @@
 6) Classes
 7) API Calls
 8) Hoisting
-9) Event Bubbling
+9) Event Bubbling/Capturing
 10) Map, Set
 11) Recursion
 12) freeze, seal

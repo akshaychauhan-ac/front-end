@@ -10,13 +10,13 @@
 8) Hoisting
 9) Event Bubbling & Capturing
 10) Map, Set
-11) Recursion
-12) freeze, seal
+11) freeze, seal
+12) Recursion
 13) error handling patterns
 14) Value vs Reference
 
 
-# ES6 -
+# ES6
 
 let, var, const <br>
 rest parameters - (day, ...restParams) <br>
@@ -27,12 +27,12 @@ default parameters <br>
 creating a module - export import <br>
 
 
-# Questions -
+# Questions
 
 1) [Ways to reverse a string](https://betterprogramming.pub/5-ways-to-reverse-a-string-in-javascript-466f62845827)
 
 
-# Links - 
+# Links
 
 1) [Prototype Inheritance](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 2) Event loop - [Link 1](https://flaviocopes.com/javascript-event-loop/), [Link 2](https://careersjs.com/magazine/javascript-job-queue-microtask/)

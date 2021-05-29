@@ -9,14 +9,14 @@
 9) Event Bubbling & Capturing
 10) Map, Set
 
-11) Recursion
-	Base case, recursive case
-
-12) freeze, seal
+11) freeze, seal
 	Object.freeze - will freeze the keys at that level, throws error in strict mode
 		Object.isFrozen(obj)
 	Object.seal - Cannot add new or delete property but configure them
 		Object.isSealed(obj)
+
+12) Recursion
+	Base case, recursive case
 
 13) error handling patterns
 

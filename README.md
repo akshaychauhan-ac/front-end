@@ -8,7 +8,7 @@
 6) Classes
 7) API Calls
 8) Hoisting
-9) Event Bubbling/Capturing
+9) Event Bubbling & Capturing
 10) Map, Set
 11) Recursion
 12) freeze, seal
@@ -42,3 +42,4 @@ creating a module - export import <br>
 6) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
 7) [Closures/scopes](https://medium.com/@pvivek4/scope-and-execution-context-in-javascript-3b71e76cd193)
 8) [ES var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851)
+9) [Event Bubbling & Capturing](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)

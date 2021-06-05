@@ -9,13 +9,14 @@
 9) Event Bubbling & Capturing
 10) Map, Set
 11) freeze, seal
+12) Array Methods
 
-12) Recursion
+13) Recursion
 	Base case, recursive case
 
-13) error handling patterns
+14) error handling patterns
 
-14) Value vs Reference
+15) Value vs Reference
 	Primitives (copied by value)
 		null
 		undefined

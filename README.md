@@ -11,9 +11,10 @@
 9) Event Bubbling & Capturing
 10) Map, Set
 11) freeze, seal
-12) Recursion
-13) error handling patterns
-14) Value vs Reference
+12) Array Methods
+13) Recursion
+14) error handling patterns
+15) Value vs Reference
 
 
 # ES6

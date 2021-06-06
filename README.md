@@ -5,13 +5,13 @@
 3) Event loop - [Link 1](https://flaviocopes.com/javascript-event-loop/), [Link 2](https://careersjs.com/magazine/javascript-job-queue-microtask/)
 4) [Callbacks and Promises](https://www.geeksforgeeks.org/javascript-promises/) ([async/await](https://www.geeksforgeeks.org/async-await-function-in-javascript/))
 5) [map, reduce, filter](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
-6) Classes
+6) Array Methods
 7) [API Calls](https://levelup.gitconnected.com/all-possible-ways-of-making-an-api-call-in-plain-javascript-c0dee3c11b8b)
 8) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
 9) [Event Bubbling & Capturing](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 10) [Map, Set](https://javascript.info/map-set)
 11) [freeze, seal](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
-12) Array Methods
+12) Classes
 13) Recursion
 14) error handling patterns
 15) Value vs Reference

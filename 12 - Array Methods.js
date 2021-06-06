@@ -33,7 +33,7 @@
       arr.splice(1,1); // remove - [1,3]
       arr.splice(1,1,6); // add - [1,6,3]
 
-// 7) filter - https://github.com/akshaychauhan-ac/javascript/blob/master/05%20-%20map%2C%20reduce%2C%20filter.js
+// 7) filter - [Link](https://github.com/akshaychauhan-ac/javascript/blob/master/05%20-%20map%2C%20reduce%2C%20filter.js)
 
 // 8) map - https://github.com/akshaychauhan-ac/javascript/blob/master/05%20-%20map%2C%20reduce%2C%20filter.js
 

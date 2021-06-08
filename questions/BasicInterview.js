@@ -41,6 +41,7 @@ Promise.resolve(3).then(function (num) {
 });
 console.log(4);
 // ------------------------------------------------------------
+
 console.log(1);
 setTimeout(function () {
     console.log(2);
@@ -49,7 +50,6 @@ Promise.resolve(3).then(function (num) {
     console.log(num);
 });
 console.log(4);
-
 /*****************************************************************************************************************/
 
 // 4)
@@ -166,3 +166,13 @@ function isAnagram(word, checkWord) {
 isAnagram("Desserts", "Stressed");
 // Expected Output: false
 isAnagram("Hello", "World");
+
+/*****************************************************************************************************************/
+
+// 11)
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+var arr3 = "jones".split('');
+arr2.push(arr3);
+console.log(arr1.slice(-1));
+console.log(arr2.slice(-1));

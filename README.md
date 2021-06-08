@@ -5,8 +5,8 @@
 3) Event loop - [Link 1](https://flaviocopes.com/javascript-event-loop/), [Link 2](https://careersjs.com/magazine/javascript-job-queue-microtask/)
 4) [Callbacks and Promises](https://www.geeksforgeeks.org/javascript-promises/) ([async/await](https://www.geeksforgeeks.org/async-await-function-in-javascript/))
 5) [map, reduce, filter](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
-6) Array Methods
-7) String Methods
+6) [Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+7) [String Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 8) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
 9) [Event Bubbling & Capturing](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 10) [Map, Set](https://javascript.info/map-set)

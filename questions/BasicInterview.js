@@ -94,33 +94,33 @@ a.sum();
 /*****************************************************************************************************************/
 
 // 7)
-var arr = [[1,2,3],[2,3],[2]]
+let arr = [[1,2,3],[2,3],[2]];
 
-let firstArr = arr[0];
-let iCount = 0;
-let iElement = firstArr[0];
-let i = 0, j = 0, k = 0;
+let length1 = arr[0].length;
+let length2 = arr[1].length;
+let length3 = arr[2].length;
 
-for (i = 1; i < arr.length; i++) {
-    let temp = arr[i];
-    let prevCount = iCount;
-    let iNextElement = iElement;
+function findNumbers(arr, length1, length2, length3) {
+    let i = 0;
+    let j = 0;
+    let k = 0;
+    let elements = [];
 
-    for (j = 0; j < firstArr.length; j++) {
-        for (k = 0; k < temp.length; k++) {
-            if (firstArr[j] === temp[k]) {
-                iElement = firstArr[j];
-                iCount++;
-                break;
-            }
-        }
-        if (iCount > prevCount) {
-            break;
+    while (i < length1 && j < length2 && k < length3) {
+        if (arr[0][i] === arr[1][j] && arr[1][j] === arr[2][k]) {
+            elements.push(arr[0][i]);
+            i++;
+            j++;
+            k++;
+        } else if(arr[0][i] < arr[1][j]) {
+            i++;
+        } else if(arr[1][j] < arr[2][k]) {
+            j++;
+        } else if(arr[2][k] < arr[1][j]) {
+            k++;
         }
     }
-}
-if (iCount === (arr.length - 1)) {
-    console.log("element found" + iElement);
+    console.log(elements);
 }
 
 /*****************************************************************************************************************/

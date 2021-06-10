@@ -96,10 +96,6 @@ a.sum();
 // 7)
 let arr = [[1,2,3],[2,3],[2]];
 
-let length1 = arr[0].length;
-let length2 = arr[1].length;
-let length3 = arr[2].length;
-
 function findNumbers(arr, length1, length2, length3) {
     let i = 0;
     let j = 0;
@@ -122,6 +118,7 @@ function findNumbers(arr, length1, length2, length3) {
     }
     console.log(elements);
 }
+findNumbers(arr[0].length, arr[1].length, arr[2].length);
 
 /*****************************************************************************************************************/
 

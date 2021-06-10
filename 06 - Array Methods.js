@@ -47,11 +47,32 @@
       arr.splice(1,1,6); 
       // add - output - [1,6,3]
 
-// 7) filter - https://github.com/akshaychauhan-ac/javascript/blob/master/05%20-%20map%2C%20reduce%2C%20filter.js
+// 7) filter - filters out the values where the condition is satisfied in return statement
+      
+      // https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+      // Our objective: get the total score of force users only.
+      var personnel = [
+            { id: 5, name: "Luke Skywalker", pilotingScore: 98, shootingScore: 56, isForceUser: true },
+            { id: 82, name: "Sabine Wren", pilotingScore: 73, shootingScore: 99, isForceUser: false },
+            { id: 22, name: "Zeb Orellios", pilotingScore: 20, shootingScore: 59, isForceUser: false },
+            { id: 15, name: "Ezra Bridger", pilotingScore: 43, shootingScore: 67, isForceUser: true },
+            { id: 11, name: "Caleb Dume", pilotingScore: 71, shootingScore: 85, isForceUser: true }
+      ];
+      const totalJediScore = personnel
+            .filter(person => person.isForceUser)
+            .map(jedi => jedi.pilotingScore + jedi.shootingScore)
+            .reduce((acc, score) => acc + score, 0);
+      // output - 420
 
-// 8) map - https://github.com/akshaychauhan-ac/javascript/blob/master/05%20-%20map%2C%20reduce%2C%20filter.js
+// 8) map - evaluates each item, returns an array
 
-// 9) reduce - https://github.com/akshaychauhan-ac/javascript/blob/master/05%20-%20map%2C%20reduce%2C%20filter.js
+      // Example same as 7)
+      
+// 9) reduce - filters out the values where the condition is satisfied in return statement
+
+      // Example same as 7)
+      const totalJediScore = personnel.reduce((acc, person) => person.isForceUser ? acc + person.pilotingScore + person.shootingScore : acc, 0);
+      // output - 420
 
 // 10) find - returns the first matched element
 

@@ -116,11 +116,3 @@
 
 	Object.values(object1);
 	// output: Array ["somestring", 42, false]
-
-
-
-
-
-
-
-

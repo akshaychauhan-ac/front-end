@@ -12,9 +12,8 @@
 10) [Map, Set](https://javascript.info/map-set)
 11) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
 12) Classes
-13) Value vs Reference
+13) error handling patterns
 14) Recursion
-15) error handling patterns
 
 
 # ES6

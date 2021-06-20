@@ -18,12 +18,11 @@
 
 # ES6
 
-[var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851) <br>
-[spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) <br>
-[destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) <br>
-arrow functions <br>
-default parameters <br>
-creating a module - export import <br>
+[Declaration - var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851) <br>
+[Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) <br>
+[Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) <br>
+[Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) <br>
+Creating a module - export import <br>
 
 
 # Questions

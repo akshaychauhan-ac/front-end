@@ -19,9 +19,8 @@
 # ES6
 
 [var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851) <br>
-rest parameters - (day, ...restParams) <br>
-destructuring <br>
-spread syntax <br>
+[spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) <br>
+[destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) <br>
 arrow functions <br>
 default parameters <br>
 creating a module - export import <br>

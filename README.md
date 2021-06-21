@@ -22,7 +22,7 @@
 [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) <br>
 [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) <br>
 [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) <br>
-Creating a module - export import <br>
+[Creating a module - export import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) <br>
 
 
 # Questions

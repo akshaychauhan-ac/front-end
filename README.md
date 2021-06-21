@@ -12,11 +12,11 @@
 10) [Map, Set](https://javascript.info/map-set)
 11) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
 12) Classes
-13) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
-14) Recursion
+13) Recursion
+14) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 
 
-# ES6
+# Latest ES features
 
 [Declaration - var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851) <br>
 [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) <br>

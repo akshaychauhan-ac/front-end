@@ -13,7 +13,8 @@
 11) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
 12) Classes
 13) Recursion
-14) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+14) Debouncing & Throttling
+15) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 
 
 # Latest ES features

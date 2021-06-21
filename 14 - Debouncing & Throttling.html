@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Debouncing & Throttling</title>
+    </head>
+    <body>
+        <div>
+            <button id="btn">Click Me</button>
+        </div>
+        <script type="text/javascript">
+        	// Calls method only after delay after last event fired
+            const debounce = (fn, delay) => {
+                let timeoutId;
+
+                return function(...args) {
+                    if (timeoutId) {
+                        clearInterval(timeoutId);
+                    }
+                    timeoutId = setTimeout(() => {
+                        fn(...args);
+                    }, delay);
+                };
+            };
+
+            document.getElementById("btn").addEventListener(
+                "click", 
+                debounce(e => {
+                    console.log("Clicked!");
+                }, 500)
+            );
+        </script>
+        <script type="text/javascript">
+        	// Calls method initially & then after delay if there is again event fired
+            const throttle = (fn, delay) => {
+                let last = 0;
+                return (...args) => {
+                	const now = new Date().getTime();
+                    if (now - last < delay) {
+                        return;
+                    }
+                    last = now;
+
+                    return fn(...args);
+                };
+            };
+
+            document.getElementById("btn").addEventListener(
+                "click", 
+                throttle(e => {
+                    console.log("Clicked!");
+                }, 3000)
+            );
+        </script>
+    </body>
+</html>

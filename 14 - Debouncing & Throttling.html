@@ -9,7 +9,7 @@
             <button id="btn">Click Me</button>
         </div>
         <script type="text/javascript">
-        	// Calls method only after delay after last event fired
+            // Calls method only after delay after last event fired
             const debounce = (fn, delay) => {
                 let timeoutId;
 
@@ -31,11 +31,11 @@
             );
         </script>
         <script type="text/javascript">
-        	// Calls method initially & then after delay if there is again event fired
+            // Calls method initially & then after delay if there is again event fired
             const throttle = (fn, delay) => {
                 let last = 0;
                 return (...args) => {
-                	const now = new Date().getTime();
+                    const now = new Date().getTime();
                     if (now - last < delay) {
                         return;
                     }

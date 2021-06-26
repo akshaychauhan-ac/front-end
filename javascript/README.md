@@ -16,7 +16,6 @@
 14) [Debouncing](https://www.youtube.com/watch?v=B1P3GFa7jVc) & [Throttling](https://www.youtube.com/watch?v=9NPPsP-4LBg)
 15) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 
-
 # Latest ES features
 
 [Declaration - var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851) <br>

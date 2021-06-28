@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html style="height: 100%;">
+    <head>
+        <title>HTML5 Tags</title>
+        <style type="text/css">
+            .footerNavAnchor {
+                line-height: 3rem;
+            }
+        </style>
+    </head>
+    <body style="height: 100%;margin: 0;">
+        <header style="height: 3rem;padding: 0 1rem;">
+            <h1 style="margin: 0;line-height: 3rem;">This is the heading.</h1>
+        </header>
+        <section style="height: calc(100% - 6rem);padding: 0 1rem;overflow-y: scroll;">
+            <article>
+                <h2 style="margin: 0;line-height: 3rem;">Example of video and audio tag</h2>
+                <video width="300" height="200" controls autoplay muted>
+                   <source src="file:///x.mp4" type="video/mp4"/>
+                </video>
+            </article>
+            <article>
+                <audio controls autoplay>
+                   <source src="/html5/audio.ogg" type="audio/ogg" />
+                   <source src="file:///x.mp4" type="audio/wav"/>
+                </audio>
+            </article>
+            <article>
+                <figure style="margin: 0;">
+                  <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png" alt="GFG">
+                  <figcaption>Fig.1 Fig Caption</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h1>The progress element</h1>
+                <label for="file">Downloading progress:</label>
+                <progress id="file" value="32" max="100"> 32% </progress>
+            </article>
+        </section>
+        <footer style="height: 3rem;padding: 0 1rem;"> 
+            <nav>
+                <p style="margin: 0;">
+                    <a class="footerNavAnchor" href="https://www.geeksforgeeks.org/about/">About Us</a> |
+                    <a class="footerNavAnchor" href="https://www.geeksforgeeks.org/privacy-policy/">Privacy Policy</a> |
+                    <a class="footerNavAnchor" href="https://www.geeksforgeeks.org/careers/">Careers</a>
+                </p>
+            </nav>
+        </footer> 
+    </body>
+</html>

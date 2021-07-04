@@ -32,7 +32,7 @@
 	15) Error handling patterns
 
 
-# Latest ES features
+## Latest ES features
 
 	Declaration - var, let, const
 	Spread syntax

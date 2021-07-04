@@ -1,29 +1,44 @@
-# Javascript Topics
+# CSS
 
-1) [Prototype Inheritance](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+1) Box Model
+
+# HTML
+
+1) HTML5 Tags
+2) Table Tags
+3) Lists Tags
+4) Image Maps
+5) Canvas vs Svg
+6) Span Tag
+7) Block-level Elements vs Inline Elements
+8) Meta tag
+
+# Javascript
+
+1) Prototype Inheritance
 2) Call, apply, bind
-3) Event loop - [Link 1](https://flaviocopes.com/javascript-event-loop/), [Link 2](https://careersjs.com/magazine/javascript-job-queue-microtask/)
-4) [Callbacks and Promises](https://www.geeksforgeeks.org/javascript-promises/) ([async/await](https://www.geeksforgeeks.org/async-await-function-in-javascript/))
-5) [API Calls](https://levelup.gitconnected.com/all-possible-ways-of-making-an-api-call-in-plain-javascript-c0dee3c11b8b)
-6) [Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-7) [String Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
-8) [Object Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
-9) [Event Bubbling & Capturing](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
-10) [Map, Set](https://javascript.info/map-set)
-11) [Hoisting](https://medium.com/@pvivek4/hoisting-demystified-with-popular-interview-questions-38a93ea441ff)
+3) Event loop
+4) Callbacks and Promises (async/await)
+5) API Calls
+6) Array Methods
+7) String Methods
+8) Object Methods
+9) Event Bubbling & Capturing
+10) Map, Set
+11) Hoisting
 12) Classes
 13) Recursion
-14) [Debouncing](https://www.youtube.com/watch?v=B1P3GFa7jVc) & [Throttling](https://www.youtube.com/watch?v=9NPPsP-4LBg)
-15) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+14) Debouncing & Throttling
+15) Error handling patterns
 
 
 # Latest ES features
 
-[Declaration - var, let, const](https://medium.com/@pvivek4/es6-difference-between-var-let-and-const-with-examples-18c2d5766851) <br>
-[Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) <br>
-[Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) <br>
-[Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) <br>
-[Creating a module - export import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) <br>
+	Declaration - var, let, const <br>
+	Spread syntax <br>
+	Destructuring <br>
+	Arrow functions <br>
+	Creating a module - export import <br>
 
 
 # Questions

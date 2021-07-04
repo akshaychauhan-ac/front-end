@@ -53,8 +53,25 @@ console.log(4);
 /*****************************************************************************************************************/
 
 // 4)
-let str = "This is a string.";
+let str = "This is a string";
 str = str.split(" ").map(ele => ele.split("").reverse().join("")).join(" ");
+
+let str = "This is a string";
+let words = str.split(" ");
+
+
+for (let j = 0; j < words.length; j++) {
+    let temp = "";
+    let word = words[j].split("");
+    debugger;
+    for (let i = 0; i <= (word.length / 2); i++) {
+        temp = word[i];
+        word[i] = word[word.length - 1 - i];
+        word[word.length - 1 - i] = temp;
+    }
+    words[j] = word.join("");
+}
+console.log(words.join(" "));
 
 /*****************************************************************************************************************/
 

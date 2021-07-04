@@ -1,7 +1,14 @@
 # CSS
 
 	1) Box Model
-
+	2) Rounded corners
+	3) Border images
+	4) Multi background
+	5) Colors
+	6) Shadow
+	7) User Interface
+	8) Box sizing
+	
 # HTML
 
 	1) HTML5 Tags

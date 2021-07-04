@@ -34,11 +34,11 @@
 
 # Latest ES features
 
-	Declaration - var, let, const <br>
-	Spread syntax <br>
-	Destructuring <br>
-	Arrow functions <br>
-	Creating a module - export import <br>
+	Declaration - var, let, const
+	Spread syntax
+	Destructuring
+	Arrow functions
+	Creating a module - export import
 
 
 # Questions

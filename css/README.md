@@ -1,6 +1,6 @@
 # CSS
 
-1) Box Model
+1) [Box model](https://en.wikipedia.org/wiki/CSS_box_model) -
 	Height/Width + Padding + Border + Margin
 2) Rounded corners - border radius
 	border-radius: 15px 50px 30px;
@@ -17,8 +17,9 @@
 	text-shadow: 2px 2px;
 	box-shadow: 10px 10px;
 7) User Interface - resize, outline-offset, box-sizing
-
-
-# Reference
-
-[Link](https://en.wikipedia.org/wiki/CSS_box_model) <br>
+8) [Box sizing](https://www.tutorialspoint.com/css/css3_box_sizing.htm) -
+	Since css2, the box property has worked like as shown below −
+		width + padding + border = actual visible/rendered width of an element's box
+		height + padding + border = actual visible/rendered height of an element's box
+	CSS3 - box-sizing: border-box;
+		Padding is taken inside the element box

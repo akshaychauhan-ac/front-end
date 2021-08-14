@@ -9,6 +9,9 @@
 	7) User Interface
 	8) Box sizing
 	9) Positioning
+	10) Selectors
+	11) display:none vs visiblity: hidden
+	12) Flexbox
 	
 # HTML
 

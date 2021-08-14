@@ -31,6 +31,7 @@
 			if it has no positioned ancestors, it uses the document body, and moves along with page scrolling.
 		fixed -
 			positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+	10) Selectors
 
 # Reference
 

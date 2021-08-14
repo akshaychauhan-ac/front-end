@@ -41,6 +41,10 @@
 			positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
 
 	10) Selectors
+		  Pseudo-class
+		  Pseudo-element
+		  id selector
+		  class selector
 
 	11) Difference between display:none and visiblity: hidden
 		  visibility:hidden hides the element, but it still takes up space in the layout.
@@ -55,3 +59,4 @@
 
 [Box model](https://en.wikipedia.org/wiki/CSS_box_model) <br>
 [Box sizing](https://www.tutorialspoint.com/css/css3_box_sizing.htm)
+[Link](https://www.softwaretestinghelp.com/css-interview-questions/amp/)

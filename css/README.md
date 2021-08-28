@@ -54,6 +54,13 @@
 		  A Flexible Layout must have a parent element with the display property set to flex.
 		  Direct child elements(s) of the flexible container automatically becomes flexible items.
 
+	13) display -
+		  none - hides the element completely.
+		  block - Displays an element as a block element (like <p>).
+		  inline - Displays an element as an inline element (like <span>). Any height and width properties will have no effect.
+		  inline-block - Displays an element as an inline-level block container.
+		  				 The element itself is formatted as an inline element, but you can apply height and width values.
+
 
 # Reference
 

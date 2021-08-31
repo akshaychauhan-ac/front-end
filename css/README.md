@@ -22,9 +22,9 @@
 
 			In HTML file:
 			<style>
-			#content h1 {
-			  background-color: yellow; // This is picked.
-			}
+				#content h1 {
+				  background-color: yellow; // This is picked.
+				}
 			</style>
 		4. A class selector beats any number of element selectors
 			.intro {background-color: yellow;} // This is picked.

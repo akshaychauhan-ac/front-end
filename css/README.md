@@ -38,13 +38,11 @@
 		  				The element itself is formatted as an inline element, but you can apply height and width values.
 
 	4) Positioning
-		relative -
-			It is positioned relative to its normal position.
-		absolute -
-			positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
-			if it has no positioned ancestors, it uses the document body, and moves along with page scrolling.
-		fixed -
-			positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+		static - Default property. Elements are not affected by the top, bottom, left, and right properties.
+		relative - Positioned relative to its normal position. Elements are adjusted by the top, bottom, left, and right properties.
+		absolute - Positioned relative to the nearest positioned ancestor. If it has no positioned ancestors, it uses the document body, and moves
+					along with page scrolling.
+		fixed - Positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
 
 	5) Flexbox
 		A Flexible Layout must have a parent element with the display property set to flex.

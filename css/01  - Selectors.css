@@ -1,0 +1,48 @@
+                                                /*CSS selectors*/
+
+/*1) Pseudo-class - A pseudo-class is used to define a special state of an element.
+        For example, it can be used to:
+            Style an element when a user mouses over it
+            Style visited and unvisited links differently
+            Style an element when it gets focus
+
+        selector:pseudo-class {
+            property: value;
+        }*/
+    a:visited {
+        color: #00FF00;
+    }
+    p:nth-child(2) {
+        background: red;
+    }
+
+/*2) Pseudo-element - A CSS pseudo-element is used to style specified parts of an element.
+        For example, it can be used to:
+            Style the first letter, or line, of an element
+            Insert content before, or after, the content of an element
+
+        selector::pseudo-element {
+            property: value;
+        }*/
+    h1::after {
+        content: url(smiley.gif);
+    }
+    p::first-line {
+        color: #ff0000;
+        font-variant: small-caps;
+    }
+
+/*3) Id selector - The id selector uses the id attribute of an HTML element to select a specific element.*/
+
+    #para1 {
+        text-align: center;
+        color: red;
+    }
+
+/*4) Class selector - The class selector selects HTML elements with a specific class attribute.*/
+
+    .center {
+        text-align: center;
+        color: red;
+    }
+

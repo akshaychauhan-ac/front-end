@@ -1,6 +1,6 @@
 # CSS
 
-    1) Selectors
+    1) Selectors -
         Pseudo-class
         Pseudo-element
         id selector
@@ -55,14 +55,14 @@
         o inline-block - Displays an element as an inline-level block container.
                 The element itself is formatted as an inline element, but you can apply height and width values.
 
-    4) Positioning
+    4) Positioning -
         o static - Default property. Elements are not affected by the TBLR properties.
         o relative - Positioned relative to its normal position. Elements are adjusted by the TBLR properties.
         o absolute - Positioned relative to the nearest positioned ancestor.
             If it has no positioned ancestors, it uses the document body, and moves along with page scrolling.
         o fixed - Positioned relative to the viewport, it always stays in the same place even if the page is scrolled.
 
-    5) Flexbox
+    5) Flexbox -
         A Flexible Layout must have a parent element with the display property set to flex.
         Direct child elements(s) of the flexible container automatically becomes flexible items.
 

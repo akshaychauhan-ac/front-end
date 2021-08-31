@@ -35,13 +35,13 @@
 		block - Displays an element as a block element (like <p>).
 		inline - Displays an element as an inline element (like <span>). Any height and width properties will have no effect.
 		inline-block - Displays an element as an inline-level block container.
-		  				The element itself is formatted as an inline element, but you can apply height and width values.
+		  		The element itself is formatted as an inline element, but you can apply height and width values.
 
 	4) Positioning
 		static - Default property. Elements are not affected by the top, bottom, left, and right properties.
 		relative - Positioned relative to its normal position. Elements are adjusted by the top, bottom, left, and right properties.
 		absolute - Positioned relative to the nearest positioned ancestor. If it has no positioned ancestors, it uses the document body, and moves
-			along with page scrolling.
+				along with page scrolling.
 		fixed - Positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
 
 	5) Flexbox

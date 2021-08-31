@@ -10,14 +10,14 @@
         Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.
         Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class,
         add 1 for each element name or pseudo-element.
-        1. Equal specificity: the latest rule counts
+        o Equal specificity: the latest rule counts
             h1 {
                 background-color: yellow;
             }
             h1 {
                 background-color: red;
             } // This is picked.
-        2. ID selectors have a higher specificity than attribute selectors
+        o ID selectors have a higher specificity than attribute selectors
             div#a {
                 background-color: green;
             } // This is picked.
@@ -27,7 +27,7 @@
             div[id=a] {
                 background-color: blue;
             }
-        3. Contextual selectors are more specific than a single element selector - 
+        o Contextual selectors are more specific than a single element selector - 
             The embedded style sheet is closer to the element to be styled. So in the following situation
             From external CSS file:
             #content h1 {
@@ -40,7 +40,7 @@
                   background-color: yellow; // This is picked.
                 }
             </style>
-        4. A class selector beats any number of element selectors
+        o A class selector beats any number of element selectors
             .intro {
                 background-color: yellow;
             } // This is picked.
@@ -49,18 +49,18 @@
             }
 
     3) display -
-        none - hides the element completely.
-        block - Displays an element as a block element (like <p>).
-        inline - Displays an element as an inline element (like <span>). Any height and width will have no effect.
-        inline-block - Displays an element as an inline-level block container.
+        o none - hides the element completely.
+        o block - Displays an element as a block element (like <p>).
+        o inline - Displays an element as an inline element (like <span>). Any height and width will have no effect.
+        o inline-block - Displays an element as an inline-level block container.
                 The element itself is formatted as an inline element, but you can apply height and width values.
 
     4) Positioning
-        static - Default property. Elements are not affected by the TBLR properties.
-        relative - Positioned relative to its normal position. Elements are adjusted by the TBLR properties.
-        absolute - Positioned relative to the nearest positioned ancestor.
+        o static - Default property. Elements are not affected by the TBLR properties.
+        o relative - Positioned relative to its normal position. Elements are adjusted by the TBLR properties.
+        o absolute - Positioned relative to the nearest positioned ancestor.
             If it has no positioned ancestors, it uses the document body, and moves along with page scrolling.
-        fixed - Positioned relative to the viewport, it always stays in the same place even if the page is scrolled.
+        o fixed - Positioned relative to the viewport, it always stays in the same place even if the page is scrolled.
 
     5) Flexbox
         A Flexible Layout must have a parent element with the display property set to flex.

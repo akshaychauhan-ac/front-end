@@ -90,12 +90,11 @@
             Opacity
 
     11) Shadow -
-        text-shadow: 2px 2px;
-        box-shadow: 10px 10px;
+         text-shadow: 2px 2px;
+         box-shadow: 10px 10px;
 
-    12) Rounded corners - border radius
-        border-radius: 15px 50px 30px;
-        TL-TR-BR-BL
+    12) Rounded corners - TL-TR-BR-BL
+         border-radius: 15px 50px 30px;
 
     13) Border images - border-image (source, repeat, slice, etc)
 

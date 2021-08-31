@@ -46,9 +46,12 @@
 		  id selector
 		  class selector
 
-	11) Difference between display:none and visiblity: hidden
-		  visibility:hidden hides the element, but it still takes up space in the layout.
-		  display:none removes the element from the document. It does not take up any space.
+	11) Specificity - Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.
+		  1. Equal specificity: the latest rule counts
+		  2. ID selectors have a higher specificity than attribute selectors
+		  3. Contextual selectors are more specific than a single element selector - 
+		  		The embedded style sheet is closer to the element to be styled. So in the following situation
+		  4. A class selector beats any number of element selectors
 
 	12) Flexbox
 		  A Flexible Layout must have a parent element with the display property set to flex.
@@ -60,6 +63,10 @@
 		  inline - Displays an element as an inline element (like <span>). Any height and width properties will have no effect.
 		  inline-block - Displays an element as an inline-level block container.
 		  				 The element itself is formatted as an inline element, but you can apply height and width values.
+
+	14) Difference between display:none and visiblity: hidden
+		  visibility:hidden hides the element, but it still takes up space in the layout.
+		  display:none removes the element from the document. It does not take up any space.
 
 
 # Reference

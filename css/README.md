@@ -41,7 +41,7 @@
 		static - Default property. Elements are not affected by the top, bottom, left, and right properties.
 		relative - Positioned relative to its normal position. Elements are adjusted by the top, bottom, left, and right properties.
 		absolute - Positioned relative to the nearest positioned ancestor. If it has no positioned ancestors, it uses the document body, and moves
-					along with page scrolling.
+				along with page scrolling.
 		fixed - Positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
 
 	5) Flexbox

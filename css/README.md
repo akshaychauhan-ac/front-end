@@ -7,6 +7,7 @@
 		class selector
 
 	2) Specificity - Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.
+		Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class, add 1 for each element name or pseudo-element.
 		1. Equal specificity: the latest rule counts
 			h1 {background-color: yellow;}
 			h1 {background-color: red;} // This is picked.

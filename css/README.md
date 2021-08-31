@@ -8,10 +8,26 @@
 
 	2) Specificity - Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.
 		1. Equal specificity: the latest rule counts
+			h1 {background-color: yellow;}
+			h1 {background-color: red;} // This is picked.
 		2. ID selectors have a higher specificity than attribute selectors
+			div#a {background-color: green;} // This is picked.
+			#a {background-color: yellow;}
+			div[id=a] {background-color: blue;}
 		3. Contextual selectors are more specific than a single element selector - 
 			The embedded style sheet is closer to the element to be styled. So in the following situation
+			From external CSS file:
+			#content h1 {background-color: red;}
+
+			In HTML file:
+			<style>
+			#content h1 {
+			  background-color: yellow; // This is picked.
+			}
+			</style>
 		4. A class selector beats any number of element selectors
+			.intro {background-color: yellow;} // This is picked.
+			h1 {background-color: red;}
 
 	3) display -
 		none - hides the element completely.

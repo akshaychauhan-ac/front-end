@@ -51,15 +51,15 @@
             myRevealingModule.setName('Marvin King');
 
     4)  Singleton Pattern -
-            var singletonPattern = (function() {
-                var instance;
+            let singletonPattern = (function() {
+                let instance;
                 function init() {
                     // Singleton
                     function privateMethod() {
                       console.log('privateMethod');
                     }
-                    var privateVariable = 'this is private variable';
-                    var privateRandomNumber = Math.random();
+                    let privateVariable = 'this is private variable';
+                    let privateRandomNumber = Math.random();
                     return {
                         publicMethod: function() {
                             console.log('publicMethod');
@@ -83,7 +83,7 @@
             })();
 
             // Usage:
-            var single = singletonPattern.getInstance();
+            let single = singletonPattern.getInstance();
 
     5)  Prototype Pattern -
             var myCar = {
@@ -102,5 +102,34 @@
             console.log( yourCar.name );
 
     6) Factory Pattern -
+            const Laptop = function({ ram, hdd, name }) {
+                this.ram = ram || 0;
+                this.hdd = hdd || 0;
+                this.name = name || "";
+            };
+            const Tablet = function({ ram, hdd, name, network }) {
+                this.ram = ram || 0;
+                this.hdd = hdd || 0;
+                this.network = network || 0;
+                this.name = name || "";
+            };
+            const gadget = { Laptop, Tablet };
+            const createGadget = function(type, attributes) {
+                const GadgetType = gadget[type];
+                return new GadgetType(attributes);
+            }
 
-            
+            // Usage:
+            const myLaptop = createGadget("Laptop", {
+                ram: 8,
+                hdd: 256,
+                name: "Bob's MacBook Pro"
+            });
+            const myTablet = createGadget("Tablet", {
+                ram: 4,
+                hdd: 128,
+                name: "Bab's iPad",
+                network: "4G"
+            });
+            console.log(myLaptop);
+            console.log(myTablet);

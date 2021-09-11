@@ -43,13 +43,23 @@
 	15) Error handling patterns
 
 
-## Latest ES features
+### Latest ES features
 
 	Declaration - var, let, const
 	Spread syntax
 	Destructuring
 	Arrow functions
 	Creating a module - export import
+
+
+# Design Patterns
+
+	1) Constructor
+	2) Module
+	3) Revealing Module
+	4) Singleton
+	5) Prototype
+	6) Factory
 
 
 # Questions

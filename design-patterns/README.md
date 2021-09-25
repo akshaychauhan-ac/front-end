@@ -8,47 +8,44 @@
             }
 
             // Usage:
-            var bmw = new Car('M4', '2019', '1000');
+            const bmw = new Car('M4', '2019', '1000');
 
     2)  Module Pattern -
-            var testModule = (function() {
-                var counter = 0;
+            This is used to further emulate the concept of classes in such a way that we’re able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope.
+            const testModule = (function() {
+                let counter = 0;
                 return {
-                    incrementCounter: function() {
-                      return ++counter;
-                    },
-                    resetCounter: function() {
-                      counter = 0;
+                    incrementCounter: () => ++counter,
+                    resetCounter: () => {
+                        console.log("Counter before reset was " + counter);
+                        counter = 0;
                     }
                 };
             })();
 
             // Usage:
             testModule.incrementCounter();
-            testModule.resetCounter(); 
+            testModule.resetCounter();
 
     3)  Revealing Module Pattern -
-            var myRevealingModule = (function() {
-                let privateVariable = 'not okay',
-                    publicVariable = 'okay';
-                function privateFun() {
-                    return privateVariable;
+            The only difference is that the revealing module pattern was engineered as a way to ensure that all methods and variables are kept private until they are explicitly exposed; usually through an object literal returned by the closure from which it’s defined.
+            const myRevealingModule = (function() {
+                function myMethod() {
+                    console.log('my method');
                 }
-                function publicSetName(strName) {
-                    privateVariable = strName;
+                function myOtherMethod() {
+                    console.log('my other method');
                 }
-                function publicGetName() {
-                    privateFun();
-                }
+                // explicitly return public methods when this object is instantiated
                 return {
-                    setName: publicSetName,
-                    message: publicVariable,
-                    getName: publicGetName
+                    someMethod: myMethod,
+                    someOtherMethod: myOtherMethod
                 };
             })();
 
             //Usage:
-            myRevealingModule.setName('Marvin King');
+            myRevealingModule.someMethod();
+            myRevealingModule.someOtherMethod();
 
     4)  Singleton Pattern -
             let singletonPattern = (function() {

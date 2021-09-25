@@ -29,10 +29,10 @@
 
     3)  Revealing Module Pattern -
             var myRevealingModule = (function() {
-                var privateVariable = 'not okay',
+                let privateVariable = 'not okay',
                     publicVariable = 'okay';
-                    function privateFun() {
-                        return privateVariable;
+                function privateFun() {
+                    return privateVariable;
                 }
                 function publicSetName(strName) {
                     privateVariable = strName;

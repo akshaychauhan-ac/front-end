@@ -42,7 +42,6 @@
 	14) Debouncing & Throttling
 	15) Error handling patterns
 
-
 ##### Latest ES features
 
 	Declaration - var, let, const

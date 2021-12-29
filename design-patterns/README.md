@@ -6,9 +6,15 @@
                 this.year = year;
                 this.miles = miles;
             }
+            Car.prototype.toString = function () {
+                return this.model + " has done " + this.miles + " miles";
+            };
 
             // Usage:
-            const bmw = new Car('M4', '2019', '1000');
+            const bmw = new Car("M4", "2019", "1000");
+            const civic = new Car("Honda Civic", 2009, 20000);
+            console.log(bmw.toString());
+            console.log(civic.toString());
 
     2)  Module Pattern -
             This is used to further emulate the concept of classes in such a way that we’re able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope.
@@ -31,10 +37,10 @@
             The only difference is that the revealing module pattern was engineered as a way to ensure that all methods and variables are kept private until they are explicitly exposed; usually through an object literal returned by the closure from which it’s defined.
             const myRevealingModule = (function() {
                 function myMethod() {
-                    console.log('my method');
+                    console.log("my method");
                 }
                 function myOtherMethod() {
-                    console.log('my other method');
+                    console.log("my other method");
                 }
                 // explicitly return public methods when this object is instantiated
                 return {

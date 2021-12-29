@@ -11,7 +11,7 @@
 		The <span> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
 		For adding color / background to the texts. Highlight any color text.
 
-	7) Block-level Elements vs Inline Elements
+	7) Block-level Elements vs Inline Elements vs Inline block Elements
 
 		Block-level Elements
 
@@ -26,8 +26,15 @@
 		o It does not start on a new line.
 		o It only takes up as much width as necessary.
 		o This is a <span> element inside a paragraph.
+		o Height/width cannot be applied.
+		o Margin/padding can be applied but doesn't behave as expected.
 
 		o Example: <a>, <button>, <img>, <input>, <label>
+
+		Inline block Elements
+
+		o Behaves like inline elements but height/width/margin/padding everything can be applied.
+		o Does not add a line-break after the element, so the element can sit next to other elements.
 
 	8) Meta tag -
 		o It defines metadata about an HTML document.

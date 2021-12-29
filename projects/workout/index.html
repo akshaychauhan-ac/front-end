@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Workout</title>
+        <link rel="stylesheet" type="text/css" href="./css/Style.css">
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript">
+            const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const iDay = new Date().getDay();
+
+            function getExercise (iDay) {
+                let tbody = document.createElement("tbody");
+                let list = [];
+                let exercise = "";
+
+                switch (iDay) {
+                case 1:
+                    exercise = "Shoulders";
+                    list = [{
+                        name: "Front raise",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Lateral raise",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dumbbell press",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Barbell press",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Upright barbell",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Arnold press",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dumbbell shrugs",
+                        sets: 3,
+                        reps: 15
+                    }];
+                    break;
+                case 2:
+                    exercise = "Biceps";
+                    list = [{
+                        name: "Pushups/close grip",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dumbbell curl",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Barbell curl",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Hammer",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Concentration curl",
+                        sets: 3,
+                        reps: 15
+                    }];
+                    break;
+                case 3:
+                    exercise = "Chest";
+                    list = [{
+                        name: "Pushups",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dumbbell press",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Barbell press",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Flat flys",
+                        sets: 3,
+                        reps: 15
+                    }];
+                    break;
+                case 4:
+                    exercise = "Triceps";
+                    list = [{
+                        name: "Pushups close",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Single arm",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Double arm",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dumbbell row",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dips",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dumbbell kickback",
+                        sets: 3,
+                        reps: 15
+                    }];
+                    break;
+                case 5:
+                    exercise = "Back";
+                    list = [{
+                        name: "Deadlifts",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Dumbbell row",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Low to high row",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Reverse flys",
+                        sets: 3,
+                        reps: 15
+                    }];
+                    break;
+                case 6:
+                    exercise = "Legs";
+                    list = [{
+                        name: "Squats",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Wall sit",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Lunges",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Squat hold",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Calf raises",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Barbell squats",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Climbers",
+                        sets: 3,
+                        reps: 15
+                    }];
+                    break;
+                case 0:
+                    exercise = "Abs";
+                    list = [{
+                        name: "Squats",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Plank",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Leg raise",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Crunches",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Cross crunches",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Flutter kicks",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Russian twist",
+                        sets: 3,
+                        reps: 15
+                    }, {
+                        name: "Thrust",
+                        sets: 3,
+                        reps: 15
+                    }];
+                    break;
+                default:
+                    break;
+                }
+
+                for (let iCount = 0; iCount < list.length; iCount++) {
+                    let oRow = document.createElement("tr");
+                    let oRowItem1 = document.createElement("td");
+                    let oRowItem2 = document.createElement("td");
+                    let oRowItem3 = document.createElement("td");
+                    
+                    oRowItem1.appendChild(document.createTextNode(list[iCount].name));
+                    oRowItem2.appendChild(document.createTextNode(list[iCount].sets));
+                    oRowItem3.appendChild(document.createTextNode(list[iCount].reps));
+
+                    oRowItem1.classList.add("exerciseColumn");
+                    oRowItem1.classList.add("firstColumn");
+                    oRowItem2.classList.add("setsColumn");
+                    oRowItem3.classList.add("repsColumn");
+                    oRow.appendChild(oRowItem1);
+                    oRow.appendChild(oRowItem2);
+                    oRow.appendChild(oRowItem3);
+                    tbody.appendChild(oRow);
+                }
+
+                return { exercise, tbody };
+            }
+
+            function changeExercise (iDay) {
+                let table = document.getElementById("exerciseTable");
+                let exerciseData = getExercise(iDay);
+
+                document.getElementById("dayLabel").innerText = weekdays[iDay] + ": " + exerciseData.exercise;
+                $("#exerciseTable > tbody").remove();
+                table.appendChild(exerciseData.tbody);
+            }
+
+            $(document).ready(() => {
+                let table = document.getElementById("exerciseTable");
+                let exerciseData = getExercise(iDay);
+
+                document.getElementById("dayLabel").innerText = weekdays[iDay] + ": " + exerciseData.exercise;
+                table.appendChild(exerciseData.tbody);
+
+                $("#tabContainer a." + iDay).addClass("selectedTitle");
+                $("#tabContainer").on("click","a", function () {
+                    $("#tabContainer a.selectedTitle").removeClass("selectedTitle");
+                    $(this).addClass("selectedTitle");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header class="headerStyle">
+            <nav id="tabContainer" class="tabContainer">
+                <a class="daysLink 1" href="javascript:void(0);" onclick="changeExercise(1);">Monday</a>
+                <a class="daysLink 2" href="javascript:void(0);" onclick="changeExercise(2);">Tuesday</a>
+                <a class="daysLink 3" href="javascript:void(0);" onclick="changeExercise(3);">Wednesday</a>
+                <a class="daysLink 4" href="javascript:void(0);" onclick="changeExercise(4);">Thursday</a>
+                <a class="daysLink 5" href="javascript:void(0);" onclick="changeExercise(5);">Friday</a>
+                <a class="daysLink 6" href="javascript:void(0);" onclick="changeExercise(6);">Saturday</a>
+                <a class="daysLink 7" href="javascript:void(0);" onclick="changeExercise(0);">Sunday</a>
+            </nav>
+        </header>
+        <section class="content">
+            <article class="daysTitle">
+                <label id="dayLabel"></label>
+            </article>
+            <table id="exerciseTable" class="exerciseTable">
+                <thead>
+                    <tr>
+                        <th class="exerciseColumn">Exercise</th>
+                        <th class="setsColumn">Sets</th>
+                        <th class="repsColumn">Reps</th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </body>
+</html>

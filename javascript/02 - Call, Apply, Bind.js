@@ -27,8 +27,17 @@ cylinder.volume.apply({pi: 3.14159}, [2, 6]);
 
 // 3) bind
 var newVolume = cylinder.volume.bind({pi: 3.14159}); // This is not instant call
-// After some long time, somewhere in the wild 
 newVolume(2,6); // Now pi is 3.14159
 
 // bind - adding a context which will be accessible in the method (useful while calling)
 // useful for maintaining context in asynchronous callbacks and events
+
+// Polyfill
+
+Function.prototype.myBind = function (...args) {
+    let obj = this;
+    let params = args.slice(1);
+    return function (...args2) {
+        obj.apply(args[0], [...params, ...args2]);
+    }
+}

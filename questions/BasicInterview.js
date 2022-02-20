@@ -190,3 +190,138 @@ var arr3 = "jones".split('');
 arr2.push(arr3);
 console.log(arr1.slice(-1));
 console.log(arr2.slice(-1));
+
+/***********************************/
+// Hoisting
+function test(){
+console.log(a,b,c);
+
+var a = 0;
+let b = 1;
+const c = 2;
+}
+test(); // Output: undefined b cannot be initialized (temperal dead zone)
+
+/********************************/
+// Implicit and Explicit Binding
+var obj1 = {
+name: "Test",
+display: function() {
+console.log(this.name);
+}};
+
+var obj2 = {
+name: "Test2"
+};
+
+obj1.display.call(obj2) // Output: Test2
+/******************************************/
+
+var obj1 = {
+name: "Test",
+display: () => {
+console.log(this.name);
+}
+};
+
+var obj2 = {
+name: "Test2"
+};
+
+obj1.display.call(obj2) // Output: Nothing as it is an arrow function and it refers to window object
+
+/**********************************************/
+// Memoization
+function fib(n, previousFib = []) {
+  let result;
+  if (previousFib[n] != null) {
+    return previousFib[n];
+  }
+ if (n <= 2) {
+    result = 1;
+  } else {
+    result = fib(n - 1, previousFib) + fib(n - 2, previousFib);
+  }
+  previousFib[n] = result;
+  return result;
+}
+console.log(fib(1000));
+https://www.section.io/engineering-education/an-introduction-to-memoization-in-javascript/
+
+/**********************************************/
+// Infinite Currying
+function sum(a){
+  return function (b){
+      if(b){
+	   return sum(a+b);
+	}
+      return a;
+   }
+}
+
+console.log(sum(3)(2)(4)(5)()); // Output: 14
+
+/**********************************************/
+
+const calculate = {
+  total:0,
+  add: function (num) {
+     this.total +=num;
+     return this;
+  },
+  multiply: function (num) {
+     this.total *=num;
+     return this;
+  },
+  sub: function (num) {
+     this.total -=num;
+     return this;
+  },
+  divide: function (num) {
+     this.total /=num;
+     return this;
+  }
+};
+
+const ans = calculate.add(10).multiply(20).sub(50);
+console.log(ans.total);
+
+/**********************************************/
+
+console.log(null == undefined) // true
+console.log(null === undefined) // false 
+
+/**********************************************/
+// flatten array
+
+const flat = (arr, ans = []) => {
+    arr.forEach(val => {
+    if(Array.isArray(val)){
+        flat(val, ans);
+        }else{
+            ans.push(val);
+        }
+    })
+return ans;
+}
+let value = [1,2,[3,4],5,6,7,[8,[9,10]]];
+console.log(flat(value));
+
+/**********************************************/
+function varScoped() {
+    for (var i = 0; i < 3; i++) {
+        setTimeout(() => {
+            console.log(i);
+        }, i* 1000)
+    }
+};
+varScoped(); // 3 3 3
+
+function letScoped() {
+    for (let i = 0; i < 3; i++) {
+        setTimeout(() => {
+            console.log(i);
+        }, i* 1000)
+    }
+};
+letScoped(); // 0 1 2

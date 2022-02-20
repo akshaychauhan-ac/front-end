@@ -40,6 +40,9 @@ Promise.resolve(3).then(function (num) {
     console.log(num);
 });
 console.log(4);
+
+//Output: 1 4 10 3 2
+
 // ------------------------------------------------------------
 
 console.log(1);
@@ -50,15 +53,18 @@ Promise.resolve(3).then(function (num) {
     console.log(num);
 });
 console.log(4);
+
+//Output: 1 4 3 2
+
 /*****************************************************************************************************************/
 
 // 4)
 let str = "This is a string";
 str = str.split(" ").map(ele => ele.split("").reverse().join("")).join(" ");
+// Output: sihT si a gnirts
 
 let str = "This is a string";
 let words = str.split(" ");
-
 
 for (let j = 0; j < words.length; j++) {
     let temp = "";
@@ -90,6 +96,12 @@ var myObject = {
 };
 myObject.func();
 
+// Output: 
+    // outer func:  this.foo = bar
+    // outer func:  self.foo = bar
+    // inner func:  this.foo = undefined
+    // inner func:  self.foo = bar
+
 /*****************************************************************************************************************/
 
 // 6)
@@ -106,7 +118,8 @@ var b = {
     b: 2
 };
 
-a.sum();
+a.sum();        // Output: 30
+a.sum.call(b)   // Output: 3
 
 /*****************************************************************************************************************/
 
@@ -143,12 +156,12 @@ findNumbers(arr[0].length, arr[1].length, arr[2].length);
 var a = 10;
 var b = 20;
 (function () {
-    console.log(a);
-    console.log(b);
+    console.log(a); // Output: undefined
+    console.log(b); // Output: 20
     var a = 30;
     b = 40;
-    console.log(a);
-    console.log(b);
+    console.log(a); // Output: 30
+    console.log(b); // Output: 40
 })();
 
 /*****************************************************************************************************************/
@@ -160,8 +173,8 @@ function foo() {
     return a;
 }
 foo();
-typeof a;
-typeof b;
+typeof a; // Output: undefined
+typeof b; // Output: 'number'
 
 /*****************************************************************************************************************/
 
@@ -192,6 +205,7 @@ console.log(arr1.slice(-1));
 console.log(arr2.slice(-1));
 
 /***********************************/
+
 // Hoisting
 function test(){
 console.log(a,b,c);
@@ -203,6 +217,7 @@ const c = 2;
 test(); // Output: undefined b cannot be initialized (temperal dead zone)
 
 /********************************/
+
 // Implicit and Explicit Binding
 var obj1 = {
 name: "Test",
@@ -215,6 +230,7 @@ name: "Test2"
 };
 
 obj1.display.call(obj2) // Output: Test2
+
 /******************************************/
 
 var obj1 = {
@@ -231,6 +247,7 @@ name: "Test2"
 obj1.display.call(obj2) // Output: Nothing as it is an arrow function and it refers to window object
 
 /**********************************************/
+
 // Memoization
 function fib(n, previousFib = []) {
   let result;
@@ -249,6 +266,7 @@ console.log(fib(1000));
 https://www.section.io/engineering-education/an-introduction-to-memoization-in-javascript/
 
 /**********************************************/
+
 // Infinite Currying
 function sum(a){
   return function (b){
@@ -266,19 +284,19 @@ console.log(sum(3)(2)(4)(5)()); // Output: 14
 const calculate = {
   total:0,
   add: function (num) {
-     this.total +=num;
+     this.total += num;
      return this;
   },
   multiply: function (num) {
-     this.total *=num;
+     this.total *= num;
      return this;
   },
   sub: function (num) {
-     this.total -=num;
+     this.total -= num;
      return this;
   },
   divide: function (num) {
-     this.total /=num;
+     this.total /= num;
      return this;
   }
 };
@@ -292,8 +310,8 @@ console.log(null == undefined) // true
 console.log(null === undefined) // false 
 
 /**********************************************/
-// flatten array
 
+// flatten array
 const flat = (arr, ans = []) => {
     arr.forEach(val => {
     if(Array.isArray(val)){
@@ -308,6 +326,7 @@ let value = [1,2,[3,4],5,6,7,[8,[9,10]]];
 console.log(flat(value));
 
 /**********************************************/
+
 function varScoped() {
     for (var i = 0; i < 3; i++) {
         setTimeout(() => {

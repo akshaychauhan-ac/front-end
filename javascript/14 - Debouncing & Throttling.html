@@ -15,7 +15,7 @@
 
                 return function(...args) {
                     if (timeoutId) {
-                        clearInterval(timeoutId);
+                        clearTimeout(timeoutId);
                     }
                     timeoutId = setTimeout(() => {
                         fn(...args);

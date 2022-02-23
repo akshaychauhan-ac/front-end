@@ -1,20 +1,25 @@
 # Design Patterns
 
     1)  Constructor Pattern -
+            A constructor method is used to initialize a newly created object.
+            It accepts arguments to set values of member properties & methods when object is created.
+            The keyword this references the new object.
+
             function Car(model, year, miles) {
                 this.model = model;
                 this.year = year;
                 this.miles = miles;
             }
-            Car.prototype.toString = function () {
-                return this.model + " has done " + this.miles + " miles";
+            Car.prototype.display = function () {
+                return `${this.model} has done ${this.miles} miles`;
             };
 
             // Usage:
             const bmw = new Car("M4", "2019", "1000");
             const civic = new Car("Honda Civic", 2009, 20000);
-            console.log(bmw.toString());
-            console.log(civic.toString());
+
+            console.log(bmw.display());
+            console.log(civic.display());
 
     2)  Module Pattern -
             This is used to further emulate the concept of classes in such a way that we’re able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope.

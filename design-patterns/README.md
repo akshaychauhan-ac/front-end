@@ -22,7 +22,9 @@
             console.log(civic.display());
 
     2)  Module Pattern -
-            This is used to further emulate the concept of classes in such a way that we’re able to include both public/private methods and variables inside a single object, thus shielding particular parts from the global scope.
+            We’re able to include both public/private methods and variables inside a single object & expose only what is necessary.
+            To keep unit of code for a project cleanly separated and organized.
+
             const testModule = (function() {
                 let counter = 0;
                 return {
@@ -37,6 +39,7 @@
             // Usage:
             testModule.incrementCounter();
             testModule.resetCounter();
+            // counter is private variable & is only accessible inside the module.
 
     3)  Revealing Module Pattern -
             The only difference is that the revealing module pattern was engineered as a way to ensure that all methods and variables are kept private until they are explicitly exposed; usually through an object literal returned by the closure from which it’s defined.
@@ -59,39 +62,30 @@
             myRevealingModule.someOtherMethod();
 
     4)  Singleton Pattern -
-            let singletonPattern = (function() {
+            const singletonPattern = (function() {
                 let instance;
+
                 function init() {
-                    // Singleton
-                    function privateMethod() {
-                      console.log('privateMethod');
-                    }
-                    let privateVariable = 'this is private variable';
-                    let privateRandomNumber = Math.random();
                     return {
-                        publicMethod: function() {
-                            console.log('publicMethod');
-                        },
-                        publicProperty: 'this is public property',
-                        getRandomNumber: function() {
-                            return privateRandomNumber;
-                        }
+                        manufacturer = 'Tesla',
+                        model = 'S',
                     };
                 }
-
                 return {
-                    // Get the singleton instance if one exists or create if it doesn't
                     getInstance: function() {
                         if (!instance) {
                             instance = init();
                         }
+
                         return instance;
                     }
-                };
-            })();
+                }
+                })();
 
             // Usage:
-            let single = singletonPattern.getInstance();
+            const instanceA = singleton.getInstance();
+            const instanceB = singleton.getInstance();
+            console.log(instanceA === instanceB); // true
 
     5)  Prototype Pattern -
             var myCar = {
@@ -141,3 +135,52 @@
             });
             console.log(myLaptop);
             console.log(myTablet);
+
+    7) Observer Pattern -
+            const Subject = function() {
+                this.observers = [];
+
+                return {
+                    subscribeObserver: function(observer) {
+                        this.observers.push(observer);
+                    },
+                    unsubscribeObserver: function(observer) {
+                        let index = this.observers.indexOf(observer);
+                        if(index > -1) {
+                            this.observers.splice(index, 1);
+                        }
+                    },
+                    notifyObserver: function(observer) {
+                        let index = this.observers.indexOf(observer);
+                        if(index > -1) {
+                            this.observers[index].notify(index);
+                        }
+                    },
+                    notifyAllObservers: function() {
+                        for(let i = 0; i < this.observers.length; i++){
+                        this.observers[i].notify(i);
+                        };
+                    }
+                };
+            };
+
+            const Observer = function() {
+                return {
+                    notify: function(index) {
+                        console.log("Observer " + index + " is notified!");
+                    }
+                }
+            };
+
+            const subject = new Subject();
+            const observer1 = new Observer();
+            const observer2 = new Observer();
+
+            subject.subscribeObserver(observer1);
+            subject.subscribeObserver(observer2);
+
+            subject.notifyObserver(observer2); // Observer 2 is notified!
+
+            subject.notifyAllObservers();
+            // Observer 1 is notified!
+            // Observer 2 is notified!

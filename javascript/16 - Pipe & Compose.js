@@ -7,3 +7,5 @@ const pipe = (...functions) => (value) => {
 const compose = (...functions) => (value) => {
   return functions.reduceRight((currentValue, currentFunction) => currentFunction(currentValue), value);
 };
+
+// Used to accept multiple functions and compute on same input

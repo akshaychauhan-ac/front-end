@@ -9,6 +9,10 @@
             <button id="btn">Click Me</button>
         </div>
         <script type="text/javascript">
+            // Debouncing
+            // Example - eCommerce website - search text
+            // When you only care about the final state
+
             // Calls method only after delay after last event fired
             const debounce = (fn, delay) => {
                 let timeoutId;
@@ -31,6 +35,10 @@
             );
         </script>
         <script type="text/javascript">
+            // Throttling
+            // Example - shooting game (different guns have different shooting time)
+            // Best used when you want to handle all intermediate states but at a controlled rate
+
             // Calls method initially & then after delay if there is again event fired
             const throttle = (fn, delay) => {
                 let last = 0;

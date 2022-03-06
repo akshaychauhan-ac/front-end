@@ -124,31 +124,12 @@ a.sum.call(b)   // Output: 3
 /*****************************************************************************************************************/
 
 // 7)
-let arr = [[1,2,3],[2,3],[2]];
+const arr1 = [1,2,3];
+const arr2 = [2,3,4,5];
+const result = arr1.filter(val => arr2.includes(val));
+console.log(result);
 
-function findNumbers(arr, length1, length2, length3) {
-    let i = 0;
-    let j = 0;
-    let k = 0;
-    let elements = [];
-
-    while (i < length1 && j < length2 && k < length3) {
-        if (arr[0][i] === arr[1][j] && arr[1][j] === arr[2][k]) {
-            elements.push(arr[0][i]);
-            i++;
-            j++;
-            k++;
-        } else if(arr[0][i] < arr[1][j]) {
-            i++;
-        } else if(arr[1][j] < arr[2][k]) {
-            j++;
-        } else if(arr[2][k] < arr[1][j]) {
-            k++;
-        }
-    }
-    console.log(elements);
-}
-findNumbers(arr[0].length, arr[1].length, arr[2].length);
+// [2,3]
 
 /*****************************************************************************************************************/
 

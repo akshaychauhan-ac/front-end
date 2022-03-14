@@ -1,4 +1,4 @@
-// Promises and Callbacks (async/await)
+Promises and Callbacks (async/await)
 
 An object representing the eventual completion or failure of an asynchronous operation.
 If there is an exception, the browser will look down the chain for .catch() handlers or onRejected.
@@ -138,10 +138,14 @@ Promise.prototype.finally()
 
 /******************************************************************************************************/
 
-// Async/await
+Async/await
 
-// Async simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread
-// Await function is used to wait for the promise. It makes the code wait until the promise returns a result. It only makes the async block wait.
+Async simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread
+Await function is used to wait for the promise. It makes the code wait until the promise returns a result. It only makes the async block wait.
+
+The await expression causes async function execution to pause until a Promise is settled (that is, fulfilled or rejected), and to resume execution of the async function after fulfillment. When resumed, the value of the await expression is that of the fulfilled Promise.
+If the Promise is rejected, the await expression throws the rejected value.
+If the value of the expression following the await operator is not a Promise, it's converted to a resolved Promise.
 
 const getData = async() => {
     var y = await "Hello World";

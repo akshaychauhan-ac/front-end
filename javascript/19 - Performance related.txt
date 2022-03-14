@@ -1,0 +1,7 @@
+Service worker - https://www.youtube.com/watch?v=ksXwaWHCW6k
+http based questions
+SEO
+web storage
+indexedDB
+cookie
+Caching websites data - CDN

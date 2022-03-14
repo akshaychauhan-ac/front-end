@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html style="height: 100%;">
+  <head>
+      <title>Grid</title>
+      <style type="text/css">
+        .container {
+        	padding: 2rem;
+        	display: grid;
+        	grid-gap: 1rem;
+        	/*grid-template-columns: 1fr 1fr 1fr;*/
+        	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+
+        	/*grid-template-rows: 60px auto 60px;*/
+        	/*grid-template-areas: "g1 g1" "g2 g3";*/
+        }
+        .cell {
+        	background-color: #BDDAB3;
+        	padding: 3rem;
+        	/*grid-area: g1;*/
+        }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+    	<div class="cell">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+      <div class="cell">1</div>
+      <div class="cell">2</div>
+      <div class="cell">3</div>
+    </div>
+  </body>
+</html>

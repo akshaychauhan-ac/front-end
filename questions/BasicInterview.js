@@ -325,3 +325,8 @@ function letScoped() {
     }
 };
 letScoped(); // 0 1 2
+
+/**********************************************/
+
+// Unique values in array
+[1,2,3,4,1,2,3,4].filter((value, index, self) => self.indexOf(value) === index);

@@ -1,0 +1,18 @@
+Progressive web applications
+    Websites that can be added as apps for offline access.
+    Technologies used -
+        Manifest.json
+        WebAssembly
+        Data storage
+            Web storage - localStorage, sessionStorage
+            Web workers
+            indexed DB API
+
+    Pros
+        Doesn't need separate bundling or distribution.
+        No need to update from app store as it updates in background.
+        Keeps form data in device and when device is connected to internet, it sends request.
+        Works on any platform.
+    Cons
+        HTML5 support for devices
+        Not available on app store

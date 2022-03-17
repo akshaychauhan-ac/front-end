@@ -1,0 +1,28 @@
+Web Storage
+	It provides mechanisms by which browsers can store key/value pairs.
+
+	getItem(key)
+	setItem(key, value)
+	removeItem(key)
+	clear()
+
+	sessionStorage -
+		It maintains a separate storage area for each given origin that's available for the duration of the page session
+			(as long as the browser is open, including page reloads and restores).
+		Data is never transferred to the server.
+		Storage limit is larger than a cookie (at most 5MB).
+
+		Code -
+			sessionStorage.colorSetting = '#a4509b';
+			sessionStorage['colorSetting'] = '#a4509b';
+			sessionStorage.setItem('colorSetting', '#a4509b');
+
+	localStorage -
+		It does the same thing, but persists even when the browser is closed and reopened.
+		It gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data.
+		Storage limit is the maximum amongst the two.
+
+		Code -
+			localStorage.colorSetting = '#a4509b';
+			localStorage['colorSetting'] = '#a4509b';
+			localStorage.setItem('colorSetting', '#a4509b');

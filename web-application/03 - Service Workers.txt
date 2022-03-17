@@ -1,0 +1,8 @@
+Service Workers
+	
+	Use cases
+		caching assets & API calls
+		push notifications (push &notification API)
+		background data sync/preload
+		used in PWA
+

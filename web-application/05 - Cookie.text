@@ -1,0 +1,18 @@
+Cookie
+	It is a small piece of information left on a visitor's computer by a website, via a web browser.
+	It is used to tell if two requests come from the same browser—keeping a user logged in.
+
+	Permanent cookies are deleted at a date specified by the Expires attribute, or after a period of time specified by the Max-Age attribute.
+	Session cookies are deleted when the current session ends.
+
+	HTTP Cookie - Set-Cookie: <cookie-name>=<cookie-value>
+	document.cookie = "name=oeschger; SameSite=None; Secure";
+	document.cookie = "favorite_food=tripe; SameSite=None; Secure";
+
+	Purposes -
+		State management
+			Logins, shopping carts, game scores, or anything else the server should remember
+		Personalization
+			User preferences, themes, and other settings
+		Tracking
+			Recording and analyzing user behavior

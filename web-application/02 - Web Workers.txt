@@ -11,24 +11,24 @@ Web Workers
         xhr
         setTimeout/setInterval
         Application cache
-
     
-    var worker = new Worker("worker_script.js");
+    Code :
+        var worker = new Worker("worker_script.js");
 
-    To send a message to the worker, the postMessage method of the worker object is used as shown below.
+        To send a message to the worker, the postMessage method of the worker object is used as shown below.
 
-    worker.postMessage("Hello World!");
+        worker.postMessage("Hello World!");
 
-    The onmessage property uses an event handler to retrieve information from a worker.
+        The onmessage property uses an event handler to retrieve information from a worker.
 
-    worker.onmessage = function(event) {
-        alert("Received message " + event.data);
-        doSomething();
-    }
-        
-    function doSomething() {
-        //do work
-        worker.postMessage("Work done!");
-    }
+        worker.onmessage = function(event) {
+            alert("Received message " + event.data);
+            doSomething();
+        }
+            
+        function doSomething() {
+            //do work
+            worker.postMessage("Work done!");
+        }
 
-    worker.terminate();
+        worker.terminate();

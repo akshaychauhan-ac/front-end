@@ -1,8 +1,52 @@
 Service Workers
-	
-	Use cases
-		caching assets & API calls
-		push notifications (push &notification API)
-		background data sync/preload
-		used in PWA
+    It act as proxy servers that sit between web applications, the browser, and the network (when available).
+    They are intended to :
+        enable the creation of effective offline experiences,
+        intercept network requests and take appropriate action based on whether the network is available,
+        and update assets residing on the server.
+    They will also allow access to push notifications and background sync APIs.
+
+    Lifecycle
+        Register => Install => Activate
+
+    Use cases
+        caching assets & API calls
+        push notifications (push &notification API)
+        background data sync/preload
+        used in PWA
+
+    Code :
+        Load serviceWorker :
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('../sw_cached_pages.js')
+                    .then(reg => console.log('Service Worker: Registered (Pages)'))
+                    .catch(err => console.log(`Service Worker: Error: ${err}`));
+            });
+        }
+
+        Call install event :
+
+        self.addEventListener('install', e => {
+            console.log('Service Worker: Installed');
+
+            // Add Cache
+        });
+
+        Call activate event :
+
+        self.addEventListener('activate', e => {
+            console.log('Service Worker: Activated');
+
+            // Remove unwanted caches
+        });
+
+        Call fetch event :
+
+        self.addEventListener('fetch', e => {
+            console.log('Service Worker: Fetching');
+            e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+        });
 

@@ -14,11 +14,13 @@
 12) Classes
 13) Recursion
 14) [Debouncing](https://www.youtube.com/watch?v=B1P3GFa7jVc) & [Throttling](https://www.youtube.com/watch?v=9NPPsP-4LBg)
-15) Closures
-16) Pipe & Compose
-17) Memoize
-18) Storage
-19) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+15) Memoize
+16) Closures
+17) Currying
+18) Pipe & Compose
+19) Performance related
+20) Storage
+21) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 
 # Latest ES features
 

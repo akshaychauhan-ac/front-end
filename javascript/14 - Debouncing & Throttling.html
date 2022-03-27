@@ -41,15 +41,17 @@
 
             // Calls method initially & then after delay if there is again event fired
             const throttle = (fn, delay) => {
-                let last = 0;
-                return (...args) => {
-                    const now = new Date().getTime();
-                    if (now - last < delay) {
-                        return;
-                    }
-                    last = now;
+                let bCallMethod = true;
 
-                    return fn(...args);
+                return function (...args) {
+                    if (bCallMethod) {
+                        fn(...args);
+                        bCallMethod = false;
+
+                        setTimeout(() => {
+                            bCallMethod = true;
+                        }, delay);
+                    }
                 };
             };
 

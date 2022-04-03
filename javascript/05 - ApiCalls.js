@@ -12,6 +12,10 @@ request.send();
 
 // 2) Fetch
 
+// You can use the Cache API with the request and response objects.
+// You can perform no-cors requests, getting a response from a server that doesn't implement CORS.
+  // You can't access the response body directly from JavaScript, but you can use it with other APIs (e.g. the Cache API)
+
 fetch("https://jsonplaceholder.typicode.com/users")
 	.then(res => res.json())
 	.then(users => console.log(users));

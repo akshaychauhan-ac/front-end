@@ -1,4 +1,6 @@
 Progressive web applications
+    Generally there are web apps (works on any browser with internet on any device) or native apps (can work offline, installable on devices).
+    PWA brings the best out of both.
     Websites that can be added as apps for offline access.
     Key principles -
         Discoverable, so the contents can be found through search engines.
@@ -26,3 +28,5 @@ Progressive web applications
     Cons -
         HTML5 support for devices
         Not available on app store
+
+    Reference - https://www.youtube.com/watch?v=IaJqMcOMuDM

@@ -67,8 +67,8 @@
 
                 function init() {
                     return {
-                        manufacturer = 'Tesla',
-                        model = 'S',
+                        manufacturer: 'Tesla',
+                        model: 'S',
                     };
                 }
                 return {
@@ -83,8 +83,8 @@
                 })();
 
             // Usage:
-            const instanceA = singleton.getInstance();
-            const instanceB = singleton.getInstance();
+            const instanceA = singletonPattern.getInstance();
+            const instanceB = singletonPattern.getInstance();
             console.log(instanceA === instanceB); // true
 
     5)  Prototype Pattern -

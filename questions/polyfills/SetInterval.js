@@ -1,16 +1,16 @@
-function interval(cb, ms) {
-    let a = {
-        clear: function() {
-            clearTimeout(a.timer);
-        },
-    };
+function interval(callback, delay) {
+    let timer;
 
     (function run() {
-        cb();
-        a.timer = setTimeout(run, ms);
+        callback();
+        timer = setTimeout(run, delay);
     })();
 
-    return a;
+    return {
+        clear: function() {
+            clearTimeout(timer);
+        }
+    };
 }
 
 const test = () => {

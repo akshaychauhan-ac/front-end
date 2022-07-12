@@ -83,9 +83,9 @@ async function something() {
 something();
 
 
-intersection observer
+// intersection observer
 
-infinite scrolling
+// infinite scrolling
 
 
 /* "54321" */
@@ -252,8 +252,9 @@ function findPairs(arr, target) {
 
 console.log(findPairs(nums, target));
 
-reduce polyfill
+// reduce polyfill
 
+// Oracle
 
 let myObj = {
     a: "abc"

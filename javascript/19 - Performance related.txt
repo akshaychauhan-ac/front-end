@@ -1,7 +1,33 @@
-Service worker - https://www.youtube.com/watch?v=ksXwaWHCW6k
-http based questions
-SEO
-web storage
-indexedDB
-cookie
-Caching websites data - CDN
+performance/page speed
+    Optimise images
+    compress images
+    lazy loading
+    optimise js - minify
+    preload critical assets
+    cdn - short round trips
+    minify css
+    optimize webfonts
+    keep scripts at bottom
+
+1. First Contentful Paint- How quickly content like text or images are painted onto your page. A good user experience is 0.9s or less
+2. Speed Index- How quickly the contents of your page are visibly populated. A good user experience is 1.3s or less
+3. Largest Contentful Paint: How long it takes for the largest element of content (e.g. a hero image) to be painted on your page. A good user experience is 1.2s or less
+4. Time to Interactive: How long it takes for your page to become fully interactive. A good user experience is 2.5s or less
+5. Total Blocking Time: How much time is blocked by scripts during your page loading process. A good user experience is 150ms or less
+6. Cumulative Layout Shift: How much your page's layout shifts as it loads. A good user experience is a score of 0.1 or less
+
+optimisations
+    Lazy loading 
+    Loading JavaScript in async 
+    Content visibility 
+    Serving critical css 
+    Resource hints 
+    Caching using service worker 
+    Caching using CDN 
+    CSR, SSR 
+    Compression techniques 
+    Layout shifts & repaints
+
+prefetching/preloading
+    Preloaded chunks will be loaded with higher priority in parallel to its parent chunk. Mark chunks to be preloaded only if you are confident that the user will interact with them immediately. This can be a dropdown or the contents of a tab.
+    Prefetched chunks have lower priority and will be loaded in the browser’s idle time. In other words, mark chunks to be prefetched if the user may need them at some point. This can be the next page he is most likely to visit. He won’t request it immediately but you want it to be there when he does.

@@ -20,6 +20,7 @@ console.log(`fibonacci number of ${n} is ${memoFib(n)}`);
 // Memoize a function
 const memoize = (func) => {
     const cache = {};
+
     return function(...args) {
         const argsIndex = JSON.stringify(args);
 

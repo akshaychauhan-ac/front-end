@@ -7,15 +7,13 @@ function promiseDelay(delay) {
             resolve();
         }, delay);
     });
-    return {
-        result,
-        clear: function() {
-            if (timeout) {
-                clearTimeout(timeout);
-                resolveMethod();
-            }
+    result.clear = function() {
+        if (timeout) {
+            clearTimeout(timeout);
+            resolveMethod();
         }
-    }
+    };
+    return result;
 }
-result = promiseDelay(5000)
+result = promiseDelay(5000);
 // result.clear();

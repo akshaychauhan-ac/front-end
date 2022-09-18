@@ -1,29 +1,3 @@
-# CSS
-
-	1) Box Model
-	2) Rounded corners
-	3) Border images
-	4) Multi background
-	5) Colors
-	6) Shadow
-	7) User Interface
-	8) Box sizing
-	9) Positioning
-	10) Selectors
-	11) display:none vs visiblity: hidden
-	12) Flexbox
-	
-# HTML
-
-	1) HTML5 Tags
-	2) Table Tags
-	3) Lists Tags
-	4) Image Maps
-	5) Canvas vs Svg
-	6) Span Tag
-	7) Block-level Elements vs Inline Elements
-	8) Meta tag
-
 # Javascript
 
 	1) Prototype Inheritance
@@ -49,6 +23,34 @@
 	Destructuring
 	Arrow functions
 	Creating a module - export import
+
+
+# HTML
+
+	1) HTML5 Tags
+	2) Table Tags
+	3) Lists Tags
+	4) Image Maps
+	5) Canvas vs Svg
+	6) Span Tag
+	7) Block-level Elements vs Inline Elements
+	8) Meta tag
+
+
+# CSS
+
+	1) Box Model
+	2) Rounded corners
+	3) Border images
+	4) Multi background
+	5) Colors
+	6) Shadow
+	7) User Interface
+	8) Box sizing
+	9) Positioning
+	10) Selectors
+	11) display:none vs visiblity: hidden
+	12) Flexbox
 
 
 # Design Patterns

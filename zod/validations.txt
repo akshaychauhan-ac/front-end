@@ -1,0 +1,209 @@
+Types of validations
+
+1) Primitives -
+	// primitive values
+	z.string();
+	z.number();
+	z.bigint();
+	z.boolean();
+	z.date();
+	z.symbol();
+	// empty types
+	z.undefined();
+	z.null();
+	z.void(); // accepts undefined
+	// catch-all types
+	// allows any value
+	z.any();
+	z.unknown();
+	// never type
+	// allows no values
+    z.never();
+
+2) Numbers -
+    You can customize certain error messages when creating a number schema.
+	const age = z.number({
+	  required_error: "Age is required",
+	  invalid_type_error: "Age must be a number",
+	});
+
+	z.number().gt(5);
+	z.number().gte(5); // alias .min(5)
+	z.number().lt(5);
+	z.number().lte(5); // alias .max(5)
+	z.number().int(); // value must be an integer
+	z.number().positive(); //     > 0
+	z.number().nonnegative(); //  >= 0
+	z.number().negative(); //     < 0
+	z.number().nonpositive(); //  <= 0
+	z.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)
+	z.number().finite(); // value must be finite, not Infinity or -Infinity
+    z.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER
+
+3) Literals -
+	Literal schemas represent a literal type, like "hello world" or 5.
+	const tuna = z.literal("tuna");
+	const twelve = z.literal(12);
+	const twobig = z.literal(2n); // bigint literal
+	const tru = z.literal(true);
+	const terrificSymbol = Symbol("terrific");
+	const terrific = z.literal(terrificSymbol);
+	// retrieve literal value
+    tuna.value; // "tuna"
+
+4) Strings -
+    Zod includes a handful of string-specific validations.
+	// validations
+	z.string().max(5);
+	z.string().min(5);
+	z.string().length(5);
+	z.string().email();
+	z.string().url();
+	z.string().emoji();
+	z.string().uuid();
+	z.string().cuid();
+	z.string().cuid2();
+	z.string().ulid();
+	z.string().regex(regex);
+	z.string().includes(string);
+	z.string().startsWith(string);
+	z.string().endsWith(string);
+	z.string().datetime(); // ISO 8601; default is without UTC offset, see below for options
+	z.string().ip(); // defaults to IPv4 and IPv6, see below for options
+	// transformations
+	z.string().trim(); // trim whitespace
+	z.string().toLowerCase(); // toLowerCase
+	z.string().toUpperCase(); // toUpperCase
+
+	const name = z.string({ required_error: "Name is required", invalid_type_error: "Name must be a string", });
+
+	z.string().min(5, { message: "Must be 5 or more characters long" });
+	z.string().max(5, { message: "Must be 5 or fewer characters long" });
+	z.string().length(5, { message: "Must be exactly 5 characters long" });
+	z.string().email({ message: "Invalid email address" });
+	z.string().url({ message: "Invalid url" });
+	z.string().emoji({ message: "Contains non-emoji characters" });
+	z.string().uuid({ message: "Invalid UUID" });
+	z.string().includes("tuna", { message: "Must include tuna" });
+	z.string().startsWith("https://", { message: "Must provide secure URL" });
+	z.string().endsWith(".com", { message: "Only .com domains allowed" });
+	z.string().datetime({ message: "Invalid datetime string! Must be UTC." });
+	z.string().ip({ message: "Invalid IP address" });
+
+5) Arrays -
+    const stringArray = z.array(z.string());
+    // equivalent
+    const stringArray = z.string().array();
+    Be careful with the .array() method. It returns a new ZodArray instance. This means the order in which you call methods matters. For instance:
+    z.string().optional().array(); // (string | undefined)[]
+    z.string().array().optional(); // string[] | undefined
+
+6) Objects -
+    // all properties are required by default
+    const Dog = z.object({
+        name: z.string(),
+        age: z.number(),
+    });
+    // extract the inferred type like this
+    type Dog = z.infer<typeof Dog>;
+    // equivalent to:
+    type Dog = {
+        name: string;
+        age: number;
+    };
+
+    z.object({
+        firstName: !version
+        ? z.string().optional().or(z.literal(""))
+        : z
+            .string({ required_error: "First name is required" })
+            .min(1, { message: "First name is required" })
+            .regex(/^[a-zA-Z][a-zA-Z' ]*$/, {
+                message: "Invalid character entered",
+            })
+            .max(50, { message: "Maximum of 50 characters" }),
+        lastName: !version
+        ? z.string().optional().or(z.literal(""))
+        : z
+            .string({ required_error: "Last name is required" })
+            .min(1, { message: "Last name is required" })
+            .regex(/^[a-zA-Z][a-zA-Z' ]*$/, {
+                message: "Invalid character entered",
+            })
+            .max(50, { message: "Maximum of 50 characters" }),
+        email: !version
+        ? z.string().optional().or(z.literal(""))
+        : z
+            .string({ required_error: "Email is required" })
+            .min(1, { message: "Email is required" })
+            .email({ message: "Please enter a valid email address" }),
+        phoneNumber: !version
+        ? z.string().optional().or(z.literal(""))
+        : z
+            .string({ required_error: "Phone number is required" })
+            .min(1, { message: "Phone number is required" })
+            .min(10, { message: "Minimum of 10 characters" })
+            .regex(/^[0-9]+$/, { message: "Input field must be a number" })
+            .max(11, { message: "Maximum of 11 characters" })
+            .refine(
+                (val: string) =>
+                !(
+                    (val.length === 11 && val.charAt(0) !== "0") ||
+                    (val.length === 10 && val.charAt(0) === "0")
+                ),
+                {
+                message: "Invalid phone number",
+                }
+            ),
+        businessName: z
+        .string({ required_error: "Business name is required" })
+        .min(1, { message: "Business name is required" })
+        .max(150, { message: "Maximum of 150 characters." }),
+        businessDescription: z
+        .string({ required_error: "Bank description is required" })
+        .min(1, { message: "Business description is required" })
+        .max(150, {
+            message: "Maximum of 150 characters.",
+        }),
+        url: z.string().optional(),
+        businessAddress: z
+        .string({ required_error: "Address is required" })
+        .min(1, { message: "Address is required" }),
+        businessHouseNo: z.string().optional(),
+        businessCountry: z.string().optional(),
+        homeAddress: z.string({ required_error: "Address is required" }).optional(),
+        homeHouseNo: z.string().optional(),
+        homeCountry: z.string().optional(),
+        dateOfBirth: z.string({ required_error: "Date of birth is required" }),
+        identificationDocumentNumber: z
+        .string({ required_error: "ID number is required" })
+        .min(1, { message: "ID number is required" }),
+        referralSubCategory: z.string().optional(),
+        otherSources:
+        channelName?.toLowerCase() === "access bank"
+            ? z.string().email().optional().or(z.literal(""))
+            : channelName?.toLowerCase() === "hydrogen team"
+            ? z
+                .string({ required_error: "Team member's name is required" })
+                .min(1, { message: "Team member's name is required" })
+                .max(150, { message: "Team member's name is too long" })
+            : channelName?.toLowerCase() === "affiliate"
+            ? z
+                .string({ required_error: "Affiliate code is required" })
+                .min(1, { message: "Affiliate code is required" })
+                .max(150, { message: "Affiliate code is too long" })
+            : channelName?.toLowerCase().includes("dsa")
+            ? z.string().min(1, { message: "Promo code is required" })
+            : z.string().optional(),
+        dsaCode: Number(version) === 1
+        ? z.string({ required_error: "DSA code is required" })
+            .min(1, { message: "DSA code is required" })
+        : z.string().optional().or(z.literal("")),
+        salesPersonnel: z.string().email().optional().or(z.literal("")),
+        ptspName: z.string().optional().or(z.literal("")),
+    });
+
+7) Optional -
+    const optionalString = z.string().optional(); // string | undefined
+
+    z.string().optional().or(z.literal(""))

@@ -16,6 +16,7 @@
         4) Strings
         5) Arrays
         6) Objects
+        7) Optional
     
     Example -
         import { z } from "zod";

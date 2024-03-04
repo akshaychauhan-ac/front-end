@@ -1,4 +1,4 @@
-Types of validations
+Types of validations -
 
 1) Primitives -
 	// primitive values

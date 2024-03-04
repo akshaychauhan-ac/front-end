@@ -1,94 +1,94 @@
 Types of validations
 
 1) Primitives -
-	// primitive values
-	z.string();
-	z.number();
-	z.bigint();
-	z.boolean();
-	z.date();
-	z.symbol();
-	// empty types
-	z.undefined();
-	z.null();
-	z.void(); // accepts undefined
-	// catch-all types
-	// allows any value
-	z.any();
-	z.unknown();
-	// never type
-	// allows no values
+    // primitive values
+    z.string();
+    z.number();
+    z.bigint();
+    z.boolean();
+    z.date();
+    z.symbol();
+    // empty types
+    z.undefined();
+    z.null();
+    z.void(); // accepts undefined
+    // catch-all types
+    // allows any value
+    z.any();
+    z.unknown();
+    // never type
+    // allows no values
     z.never();
 
 2) Numbers -
     You can customize certain error messages when creating a number schema.
-	const age = z.number({
-	  required_error: "Age is required",
-	  invalid_type_error: "Age must be a number",
-	});
+    const age = z.number({
+        required_error: "Age is required",
+        invalid_type_error: "Age must be a number",
+    });
 
-	z.number().gt(5);
-	z.number().gte(5); // alias .min(5)
-	z.number().lt(5);
-	z.number().lte(5); // alias .max(5)
-	z.number().int(); // value must be an integer
-	z.number().positive(); //     > 0
-	z.number().nonnegative(); //  >= 0
-	z.number().negative(); //     < 0
-	z.number().nonpositive(); //  <= 0
-	z.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)
-	z.number().finite(); // value must be finite, not Infinity or -Infinity
+    z.number().gt(5);
+    z.number().gte(5); // alias .min(5)
+    z.number().lt(5);
+    z.number().lte(5); // alias .max(5)
+    z.number().int(); // value must be an integer
+    z.number().positive(); //     > 0
+    z.number().nonnegative(); //  >= 0
+    z.number().negative(); //     < 0
+    z.number().nonpositive(); //  <= 0
+    z.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)
+    z.number().finite(); // value must be finite, not Infinity or -Infinity
     z.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER
 
 3) Literals -
-	Literal schemas represent a literal type, like "hello world" or 5.
-	const tuna = z.literal("tuna");
-	const twelve = z.literal(12);
-	const twobig = z.literal(2n); // bigint literal
-	const tru = z.literal(true);
-	const terrificSymbol = Symbol("terrific");
-	const terrific = z.literal(terrificSymbol);
-	// retrieve literal value
+    Literal schemas represent a literal type, like "hello world" or 5.
+    const tuna = z.literal("tuna");
+    const twelve = z.literal(12);
+    const twobig = z.literal(2n); // bigint literal
+    const tru = z.literal(true);
+    const terrificSymbol = Symbol("terrific");
+    const terrific = z.literal(terrificSymbol);
+    // retrieve literal value
     tuna.value; // "tuna"
 
 4) Strings -
     Zod includes a handful of string-specific validations.
-	// validations
-	z.string().max(5);
-	z.string().min(5);
-	z.string().length(5);
-	z.string().email();
-	z.string().url();
-	z.string().emoji();
-	z.string().uuid();
-	z.string().cuid();
-	z.string().cuid2();
-	z.string().ulid();
-	z.string().regex(regex);
-	z.string().includes(string);
-	z.string().startsWith(string);
-	z.string().endsWith(string);
-	z.string().datetime(); // ISO 8601; default is without UTC offset, see below for options
-	z.string().ip(); // defaults to IPv4 and IPv6, see below for options
-	// transformations
-	z.string().trim(); // trim whitespace
-	z.string().toLowerCase(); // toLowerCase
-	z.string().toUpperCase(); // toUpperCase
+    // validations
+    z.string().max(5);
+    z.string().min(5);
+    z.string().length(5);
+    z.string().email();
+    z.string().url();
+    z.string().emoji();
+    z.string().uuid();
+    z.string().cuid();
+    z.string().cuid2();
+    z.string().ulid();
+    z.string().regex(regex);
+    z.string().includes(string);
+    z.string().startsWith(string);
+    z.string().endsWith(string);
+    z.string().datetime(); // ISO 8601; default is without UTC offset, see below for options
+    z.string().ip(); // defaults to IPv4 and IPv6, see below for options
+    // transformations
+    z.string().trim(); // trim whitespace
+    z.string().toLowerCase(); // toLowerCase
+    z.string().toUpperCase(); // toUpperCase
 
-	const name = z.string({ required_error: "Name is required", invalid_type_error: "Name must be a string", });
+    const name = z.string({ required_error: "Name is required", invalid_type_error: "Name must be a string", });
 
-	z.string().min(5, { message: "Must be 5 or more characters long" });
-	z.string().max(5, { message: "Must be 5 or fewer characters long" });
-	z.string().length(5, { message: "Must be exactly 5 characters long" });
-	z.string().email({ message: "Invalid email address" });
-	z.string().url({ message: "Invalid url" });
-	z.string().emoji({ message: "Contains non-emoji characters" });
-	z.string().uuid({ message: "Invalid UUID" });
-	z.string().includes("tuna", { message: "Must include tuna" });
-	z.string().startsWith("https://", { message: "Must provide secure URL" });
-	z.string().endsWith(".com", { message: "Only .com domains allowed" });
-	z.string().datetime({ message: "Invalid datetime string! Must be UTC." });
-	z.string().ip({ message: "Invalid IP address" });
+    z.string().min(5, { message: "Must be 5 or more characters long" });
+    z.string().max(5, { message: "Must be 5 or fewer characters long" });
+    z.string().length(5, { message: "Must be exactly 5 characters long" });
+    z.string().email({ message: "Invalid email address" });
+    z.string().url({ message: "Invalid url" });
+    z.string().emoji({ message: "Contains non-emoji characters" });
+    z.string().uuid({ message: "Invalid UUID" });
+    z.string().includes("tuna", { message: "Must include tuna" });
+    z.string().startsWith("https://", { message: "Must provide secure URL" });
+    z.string().endsWith(".com", { message: "Only .com domains allowed" });
+    z.string().datetime({ message: "Invalid datetime string! Must be UTC." });
+    z.string().ip({ message: "Invalid IP address" });
 
 5) Arrays -
     const stringArray = z.array(z.string());

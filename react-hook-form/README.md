@@ -67,11 +67,11 @@ npm install react-hook-form
 
     /*****************************************************************************/
 
-Read value from "field.value"
-Read error message from "fieldState.error?.message"
-Destructure control from useForm() & add control={control}
-Destructure watch - watch(["firstName", "lastName"]) or watch("firstName")
-Destructure setValue to set value after reading from any API
+Read value from "field.value" <br />
+Read error message from "fieldState.error?.message" <br />
+Destructure control from useForm() & add control={control} <br />
+Destructure watch - watch(["firstName", "lastName"]) or watch("firstName") <br />
+Destructure setValue to set value after reading from any API <br />
 Property formState will give us isSubmitted, isRefetching, errors, etc
 
 Example in repo - [React hook form with zod](https://github.com/akshaychauhan-ac/react/tree/master/projects/react-hook-form-zod)

@@ -27,7 +27,7 @@ npm install react-hook-form
         );
     }
 
-    /*********************************** Using controlled ******************************************/
+    /*********************************** Using controlled inputs ******************************************/
 
     import * as React from "react"
     import { useForm, useController, UseControllerProps } from "react-hook-form"
@@ -65,7 +65,7 @@ npm install react-hook-form
         </form>
     )}
 
-    /*****************************************************************************/
+    /*****************************************************************************************************/
 
 Read value from "field.value" <br />
 Read error message from "fieldState.error?.message" <br />

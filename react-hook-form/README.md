@@ -24,3 +24,5 @@
             </form>
         );
     }
+
+    Example in repo - [React hook form with zod](https://github.com/akshaychauhan-ac/react/tree/master/projects/react-hook-form-zod)

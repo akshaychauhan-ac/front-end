@@ -71,7 +71,8 @@ Read value from "field.value" <br />
 Read error message from "fieldState.error?.message" <br />
 Destructure control from useForm() & add control={control} <br />
 Destructure watch - watch(["firstName", "lastName"]) or watch("firstName") <br />
-Destructure setValue to set value after reading from any API <br />
+Destructure setValue to set value - setValue("fieldName", "value") after reading from any API <br />
 Property formState will give us isSubmitted, isRefetching, errors, etc
+Hook useController shares the same props and methods as Controller. It's useful for creating reusable Controlled input.
 
 Example in repo - [React hook form with zod](https://github.com/akshaychauhan-ac/react/tree/master/projects/react-hook-form-zod)

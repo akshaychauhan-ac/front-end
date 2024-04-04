@@ -70,3 +70,11 @@ document.addEventListener("DOMContentLoaded", function() {
 //   max-width: 600px;
 //   height: 400px;
 // }
+
+// 1. Using the right image placeholders
+  // a) Dominant color placeholder
+  // b) Low quality image placeholder (LQIP)
+// 2. Adding some buffer time for image load
+// 3. Avoiding content shifting with lazy loading
+// 4. Do not lazy load all the images
+

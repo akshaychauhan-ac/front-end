@@ -21,7 +21,8 @@
 19) Performance related
 20) Storage
 21) Polyfills
-22) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
+22) Lazy loading with & w/o Intersection Observer
+23) [Error handling patterns](https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d)
 
 # Latest ES features
 

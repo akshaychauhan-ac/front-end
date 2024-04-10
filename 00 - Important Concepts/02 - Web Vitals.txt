@@ -27,7 +27,7 @@ Web Vitals
       Defer parsing of JS
 
 2) First Input Delay - Interactivity (100ms - good)
-		Link - https://www.hostinger.in/tutorials/first-input-delay
+    Link - https://www.hostinger.in/tutorials/first-input-delay
 
     Measure the delay of the browser until it responds to user input, including taps and clicks
 
@@ -41,7 +41,7 @@ Web Vitals
       Revise Polyfills Usage
 
 3) Cumulative Layout Shift - Visual Stability (0.1s - good)
-		Link - https://www.hostinger.in/tutorials/cumulative-layout-shift-cls
+    Link - https://www.hostinger.in/tutorials/cumulative-layout-shift-cls
 
     Measures visual stability of the web pages
 

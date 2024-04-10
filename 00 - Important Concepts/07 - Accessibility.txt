@@ -1,0 +1,11 @@
+Accessibility
+
+1) Aria label - aria-label={labelText} & aria-required="true"
+2) Semantic HTML
+3) Labeling - htmlFor="namedInput"
+4) Focus control - keyboard focus & focus outline
+5) Mouse & pointer events
+6) Setting the document title
+7) Color contrast from color pallette
+
+Screen reader - ChromeVox

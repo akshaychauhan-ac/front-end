@@ -1,0 +1,8 @@
+React Performance Optimization
+
+1) List Virtualization (Windowing) - react-vertualized
+2) Lazy loading images - react-lazyload, Intersection Observer
+3) Memoization - useMemo(), useCallback(), React.memo()
+4) Throttle/Debounce events
+5) Code splitting (React.lazy())
+6) Web workers

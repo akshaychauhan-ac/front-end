@@ -1,4 +1,4 @@
-React Performance Optimization
+React Performance Optimizations
 
 1) List Virtualization (Windowing) - react-vertualized
 2) Lazy loading images - react-lazyload, Intersection Observer

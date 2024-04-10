@@ -1,0 +1,21 @@
+Website Speed Optimizations
+
+1) Compress images (Refer - https://github.com/akshaychauhan-ac/front-end/blob/master/00%20-%20Important%20Concepts/03%20-%20Optimize%20Images.txt)
+2) Don't host your videos locally -
+    a) Enable lazy loading
+    b) Make bitrate adaptive
+    c) Use preloading
+    d) Compress your videos
+3) Avoid too many animations
+4) Optimize your code
+    a) Minimize code size
+    b) Remove unused code
+    c) Reduce server requests
+5) Utilize server-side caching
+6) Minimize external resources
+7) Use lazy loading
+8) Minimize HTTP requests
+9) Use CDN
+10) Leverage browser caching
+11) Reduce number of redirects
+12) Enable Keep-Alive (timeout)

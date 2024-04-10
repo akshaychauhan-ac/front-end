@@ -1,0 +1,10 @@
+Optimize Images
+
+  Methods to optimize images -
+    1) Serve images through CDN
+    2) Compress images
+    3) Resize images (based on screen sizes)
+    4) Choose appropriate file format (JPG, PNG, GIF, WebP)
+    5) Consider image accessibility
+    6) Implement image SEO
+    7) Utilize Lazy Loading (loading=lazy)

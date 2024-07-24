@@ -1,5 +1,9 @@
 // Lazy Loading with and without Intersection Observer
 
+// Lazy loading refers to deferring the loading of any kind of content until it becomes necessary.
+// For example, on a lengthy page, images that are not currently visible do not need to be loaded.
+// They are fetched from the server only when the user scrolls the page over or near them.
+
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages;    
 

@@ -1,5 +1,9 @@
 Infinite Scrolling
 
+Infinite Scrolling is one of the methodology by which we can achieve Lazy Loading.
+Lazy loading means the request for the resource or records will be made only when they are demanded.
+In case of Infnite Scrolling, the request for the next set of records will be made only when scroll bar reaches bottom of th grid and fires request to load the next set of records.
+
 1) Using react libraries - react-infinite-scroll-component
 
     import React, { useState, useEffect } from "react";

@@ -3,7 +3,7 @@ Web Vitals
 1) Largest Contentful Paint - Loading (2.5s - good)
     Link - https://www.hostinger.in/tutorials/largest-contentful-paint
 
-    Measure how fact the web page renders its largest elements - images and text blocks
+    Measure how fast the web page renders its largest elements - images and text blocks
     PageSpeed Insights
     Elements that trigger LCP entries include:
       Image elements (including ones inside an SVG element)

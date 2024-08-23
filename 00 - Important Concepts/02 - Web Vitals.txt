@@ -33,7 +33,7 @@ Web Vitals
 
     Methods to improve:
       Divide Long Tasks Into Smaller Ones
-      Implement Progressive Loading
+      Implement Progressive Loading - Lazy loading
       Move Logic to Server-Side
       Review Third-Party Script Execution
       Utilize Web Workers

@@ -7,3 +7,4 @@
 5) [Website speed optimizations](https://www.hostinger.in/tutorials/website-speed-optimization)
 6) [Infinite Scrolling](https://dev.to/vishnusatheesh/exploring-infinite-scroll-techniques-in-react-1bn0)
 7) [Accessibility](https://legacy.reactjs.org/docs/accessibility.html)
+8) Security

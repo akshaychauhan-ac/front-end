@@ -1,0 +1,9 @@
+Security
+
+1) User session management - Token-based authentication
+2) Validate all user input to prevent attacks such as SQL injection and cross-site scripting (XSS).
+3) Use exception management
+4) Authentication, role mgmt, access control
+5) Implement HTTPS
+6) Include auditing & logging
+7) Regular Updates and Patches for libraries

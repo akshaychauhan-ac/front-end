@@ -29,4 +29,31 @@ Progressive web applications
         HTML5 support for devices
         Not available on app store
 
+    PWA
+    	Reliable
+    	Fast
+    	Engaging
+    
+    Problem - Distribution
+    
+    Missing parts
+    	Reliable performance
+    	Push notifications 
+    	Missing in notification tray
+    	
+    40% users abandon the website if it doesn't load in 3 seconds
+    
+    Service workers (client side proxy written in JS) enable reliable performance
+    AMP components (amp-install-serviceworker)
+    
+    Chrome Lighthouse	How well app is doing in terms of:
+    	Performance
+    	Security
+    	Accessibility
+    	SEOs
+    	PWA features
+    
+    Add a service worker
+    Self - current global object, here it is worker
+
     Reference - https://www.youtube.com/watch?v=IaJqMcOMuDM

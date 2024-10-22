@@ -21,26 +21,24 @@ Website Speed Optimizations
 12) Enable Keep-Alive (timeout)
 
 Time to first byte - HTML document
+	Reduce time to first byte - deliver the initial page as quickly as possible
+		Use a CDN to reduce network distance
+		Upgrade server hardware for faster processing
+		Ensure response bodies can be streamed
 Resource load delay
+	Eliminate unnecessary resource load delay - ensure the LCP resource starts loading as soon as possible
+		Add priority hints or preload
+		Minimize network contention
+		Use same origin resources(if possible)
 Resource load time - Image resource (Optimize images)
+	Reduce resource load time - reduce LCP resource load time without compromising quality
+		Compress images
+		Use modern image formats (avif/webp)
+		Properly size images (intrinsic size should be same as rendered size)
+		Set far-future cache expiry headers (both browser and CDN)
+		Use a CDN to reduce network distance
 Element render delay
-
-
-Eliminate unnecessary resource load delay - ensure the LCP resource starts loading as soon as possible
-	Add priority hints or preload
-	Minimize network contention
-	Use same origin resources(if possible)
-Eliminate unnecessary element render delay - ensure the LCP element can render immediately after its resource has finished loading
-	Remove or minimize render blocking stylesheets
-	Defer render blocking JS
-	Use font-display optional
-Reduce resource load time - reduce LCP resource load time without compromising quality
-	Compress images
-	Use modern image formats (avif/webp)
-	Properly size images (intrinsic size should be same as rendered size)
-	Set far-future cache expiry headers (both browser and CDN)
-	Use a CDN to reduce network distance
-Reduce time to first byte - deliver the initial page as quickly as possible
-	Use a CDN to reduce network distance
-	Upgrade server hardware for faster processing
-Ensure response bodies can be streamed
+	Eliminate unnecessary element render delay - ensure the LCP element can render immediately after its resource has finished loading
+		Remove or minimize render blocking stylesheets
+		Defer render blocking JS
+		Use font-display optional

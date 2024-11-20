@@ -1,0 +1,23 @@
+Performance Improvements
+
+1) Measure performance - Google Lighthouse, Chrome DevTools
+2) Optimise front-end assets - 
+    a. Minify files.
+    b. Use gzip compression to reduce file size
+    c. Lazy loading
+3) Improve loading time
+    a. Defer and async scripts
+    b. Use CDN - serve static assets closer to users
+4) Optimize Backend performance
+    a. Optimize DB queries to reduce response time
+    b. Use caching strategies
+5)  Implement caching
+    a. Browser caching
+    b. Application caching - faster data access & response time
+        i. In-memory caching - Redis
+        ii. DB Caching
+    c. Server side caching
+    d. CDN - faster access to content globally, decreased server load
+6) Virtual scrolling - render only visible items for lists
+7) Optimize code - Remove unused code, reduce server requests
+8) Web vitals - for improving initial page load time
